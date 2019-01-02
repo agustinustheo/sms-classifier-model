@@ -1,0 +1,12 @@
+ Antihackerlink  Ganggu Situs Yellow Pages
+
+Situs Yellow Pages mengalami serangan dari para hacker. Jika Anda masuk ke situs www.yellowpages.co.id pada Kamis (8/11) siang maka layar depan yang biasanya berwarna kuning kini berubah menjadi hitam pekat lengkap dengan sebuah foto bertopeng ala ninja. Tulisan besar "You Are Under Attack" turut terpampang dalam layar situs penyedia nomor dan informasi telepon populer tersebut.
+
+Bagian Operasional Media Elektronik Yellow Pages, Adi Prasetya, mengaku situsnya tengah mengalami serangan hacker. Modus operandi mereka dengan melakukan penggantian halaman muka alias defaced. Adi mulai memonitor ulah mereka sejak Rabu (7/11) malam dan segera melakukan perbaikan. 
+
+Namun rupanya serangan dari hacker yang tergabung dalam kelompok antihackerlink tak berhenti. Akibatnya ketika Tempo News Room mencoba masuk ke situs Yellow Pages dan menekan tombol refresh pesan "defaced by Arema Cho" tetap muncul di halaman depan situs yellow pages.
+
+Serangan kali ini, menurut Adi, walau gencar tidak sampai mengakibatkan kerusakan pada server Yellow Pages. Defaced yang mereka lakukan hanya memindahkan nomor dan alamat Internet Protocol (IP) Yellow Pages ke "IP milik para hacker tersebut."
+
+Di samping mengganti warna dasar, foto dan pesan, antihackerlink juga memasang ikon dengan pesan "Don't Click" pada halaman muka situs Yellow Pages. Jika Anda mengkliknya maka layar Yellow Pages akan bergerak perlahan ke bawah dan menghilang.
+

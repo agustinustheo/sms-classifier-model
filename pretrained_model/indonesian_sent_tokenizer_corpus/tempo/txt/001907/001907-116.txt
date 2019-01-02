@@ -1,0 +1,9 @@
+Ponsel Harus Cantumkan Angka Radiasi
+
+Produsen telepon genggam (ponsel) dunia diharuskan memberikan informasi kepada pembelinya akan tingkat radiasi yang dihasilkan setiap produknya. Hal ini diatur dalam kebijakan baru yang diumumkan oleh Cellular Telecommunications Industry Association (CTIA) Senin (17/7). CTIA sendiri, yang berbasis di Washington D.C, dinilai sebagai asosiasi yang paling berpengaruh dalam dunia komunikasi selular di dunia, seperti dikutip Associated Press . Peraturan baru ini akan mulai diberlakukan Agustus 2000 untuk semua model ponsel yang meminta sertifikat produk dari CTIA.
+ 
+Peraturan ini dibuat berdasarkan berbagai kesimpangsiuran tentang kemungkinan bahaya yang ditimbulkan akibat memegang ponsel dekat dengan kepala selama beberapa waktu. Selama ini memang belum ada bukti medis yang menunjukkan radiasi ponsel dapat mengakibatkan kanker atau masalah kesehatan lainnya. Namun, juga tidak diketemukan hal khusus yang bisa melawan asumsi tersebut.
+ 
+Untuk mengukur standar radiasi akan digunakan Specific Absorption Rate (SAR) yang memang lazim digunakan untuk mengukur jumlah terpaan radiasi yang diserap tubuh saat menggunakan ponsel. Setiap produsen ponsel harus melaporkan angka SAR tersebut ketika meminta izin persetujuan kepada Komisi Komunikasi Federal (Federal Communications Commission) bagi sebuah produk baru.
+ 
+"Angkanya mungkin tidak akan tercetak pada paket baru sebuah ponsel, tapi akan ada petunjuk mengenai bagaimana mengakses informasi hal itu dari FCC," jelas Jo-Anne Basile dari CTIA yang dihubungi AP.

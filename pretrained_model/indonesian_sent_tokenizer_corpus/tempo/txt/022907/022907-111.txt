@@ -1,0 +1,18 @@
+Telkom Revisi Tarif Interkoneksi VoIP
+
+PT. Telekomunikasi Indonesia Tbk. (Telkom) telah merevisi tarif interkoneksi voice over internet protocol (VoIP) atau telepon internet. Perubahan tarif tersebut diputuskan dan berlaku sejak 15 Juli lalu. Sesuai Keputusan Menteri Perhubungan (KM) 23/2002, revisi dilakukan berdasarkan perhitungan cost pemakaian jaringan PSTN (public swicthed telephone network) Telkom.
+
+Struktur biaya interkoneksi yang direvisi tersebut terdiri dari local unbundling network dan transit jarak jauh PSTN. Dengan rincian besarannya adalah Rp 240 per menit untuk local originating atau terminating. Rp 525 permenit untuk transit jarak jauh PSTN (public switched telephone network)zona 1, Rp 870 permenit untuk zona 2 dan Rp 1170 permenit untuk zona 3. 
+
+Menurut Vice President Tarif dan Interkoneksi PT. Telkom, Sarwoto Atmosoetarno, dalam surat elektroniknya kepada Tempo News Room, Jumat (26/7) lalu, dengan struktur ini, maka ITKP (internet teleponi untuk keperluan publik) yang membangun jaringan IP (internet protocol) secara luas dapat hanya membeli akses lokal PSTN dan langsung secara fair mememotong jaringan jarak jauh Telkom sehingga mereka akan semakin kompetitif terhadap SLJJ (sambungan langsung jarak jauh) eksisting (yang sudah ada). 
+
+Ia menjelaskan perhitungan besaran tarif tersebut didasarkan pada prinsip rebalancing tarif terhadap cost. "Di era kompetisi yang fair maka subsidi silang oleh penyelenggara jaringan diharamkan sehingga Telkom memfasilitasi skimming market dapat dilakukan secara fair," ungkapnya. 
+
+Sarwoto mengatakan ITKP yang telah menandatangani persetujuan tersebut adalah Indosat, Satelindo, dan ProBis VoIP Telkom. "Diskon dapat saja diberikan berdasarkan volume pemakaian, dengan secara bersama-sama melakukan evaluasi setiap 3 bulan," papar dia. 
+
+Interkoneksi VoIP adalah keterhubungan perangkat penyelenggara jasa ITKP dengan penyelenggara jaringan misalnya PSTN TELKOM. Dalam hal ini penyelenggara jasa memanfaatkan jaringan (network) penyelenggara jaringan. 
+
+Sedangkan mengenai aturan interkoneksi dalam rangka pelaksanaan duopoli, tambah Sarwoto, saat ini masih diproses oleh regulator untuk mengubah rezim interkoneksi dari revenue sharing menjadi rezim biaya terminasi ( termination charge ) dengan besaran cost-based (berbasis biaya) sesuai dengan PP 52/2000 dan KM 20/2001. "Apabila kesepakatan dicapai oleh operator yang berinterkoneksi, mereka tinggal menuangkannya dalam perjanjian tertulis dan sah untuk dilakukan," kata Sarwoto. 
+
+Duopoli adalah penghapusan monopoli Telkom di sambungan lokal dan Indosat di sambungan internasional (SLI). Interkoneksi duopoli berarti keterhubungan antara penyelenggara jaringan dengan penyelenggara jaringan lainnya. Pada umumnya interkoneksi antar penyelenggara jaringan bersifat resiprokal, artinya saling memanfaatkan jaringan masing-masing.
+
