@@ -112,7 +112,7 @@ for name in names:
     sms_classifier = pickle.load(classifier_s)
     classifier_s.close()
     
-    result = sms_classifier.classify(find_features(preproccess_text('Top up saldo MyAds skg utk mempromosikan bisnis anda! Menangkan Voucher Shopping&MyAds tiap isi saldo 500rb. Periode 1 Des 18-31 Jan 19. bit.ly/jimyads2')))
+    result = sms_classifier.classify(find_features(preproccess_text('tuz gw coba liat tugas lu dong itu gmn jadinya')))
     if result == 0:
         normal_msg = normal_msg + 1
     elif result == 1:
@@ -123,21 +123,12 @@ for name in names:
 if normal_msg >= promo_msg and normal_msg >= spam_msg:
     best_result = "normal message"
     confidence = normal_msg / (normal_msg + promo_msg + spam_msg)
-    print(normal_msg)
-    print(promo_msg)
-    print(spam_msg)
 elif promo_msg >= normal_msg and promo_msg >= spam_msg:
     best_result = "promotion message"
     confidence = promo_msg / (normal_msg + promo_msg + spam_msg)
-    print(normal_msg)
-    print(promo_msg)
-    print(spam_msg)
 elif spam_msg >= normal_msg and spam_msg >= promo_msg:
     best_result = "spam message"
     confidence = spam_msg / (normal_msg + promo_msg + spam_msg)
-    print(normal_msg)
-    print(promo_msg)
-    print(spam_msg)
 
 print("Algorithm Confidence = {}".format(confidence*100))
 print("Model thinks this is a {}".format(best_result))

@@ -66,11 +66,8 @@ def convertAlay(text):
     return new_string
 
 def preproccess_text(text_messages):
-    # Convert if text is "alay"
-    processed = convertAlay(text_messages)
-
     # change words to lower case - Hello, HELLO, hello are all the same word
-    processed = processed.lower()
+    processed = text_messages.lower()
 
     # Replace email addresses with 'almtemail'
     processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', ' almtemail ', processed)
@@ -101,12 +98,11 @@ def preproccess_text(text_messages):
     processed = re.sub(r'^\s+|\s+?$', '', processed)
     return processed
 
-def preproccess_df(text_messages):
-    # change words to lower case - Hello, HELLO, hello are all the same word
+def preproccess_df(text_messages):# change words to lower case - Hello, HELLO, hello are all the same word
     processed = text_messages.str.lower()
 
     # Replace email addresses with 'almtemail'
-    processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', ' almtemail ', processed)
+    processed = processed.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', ' almtemail ')
         
     # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'nmrtlpn'
     processed = processed.str.replace(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' nmrtlpn' )
@@ -150,6 +146,7 @@ for foldername in os.listdir(path):
             train_text = train_text + ' ' + preproccess_text(f.read())
         f.close()
 
+print('here')
 path = 'indonesian_sent_tokenizer_corpus/tempo/txt2'
 for foldername in os.listdir(path):
     new_path = path + '/' + foldername
@@ -165,6 +162,10 @@ if f.mode == 'r':
 f.close()
 
 indonesian_sent_tokenizer = PunktSentenceTokenizer(train_text)
+
+id_token = open('indonesian_sent_tokenizer.pickle', 'wb')
+pickle.dump(indonesian_sent_tokenizer, id_token)
+id_token.close
 
 classes = df[0]
 sms_data = preproccess_df(df[1])
