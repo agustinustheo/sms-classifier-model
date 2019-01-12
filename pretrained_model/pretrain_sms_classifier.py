@@ -19,20 +19,69 @@ from sklearn.metrics import classification_report, accuracy_score, confusion_mat
 
 df = pd.read_csv('sms_classifier_corpus/data.txt', engine='python', sep="<%>", header=None)
 
-def preproccess_text(text_messages):
-    # Replace email addresses with 'almtemail'
-    processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', 'almtemail', text_messages)
+def convertAlay(text):
+    words = word_tokenize(text)
+    new_string = ''
+    for msg in words:
+        new_word = ''
+        alpha_flag = False
+        digit_flag = False
+        for c in msg:
+            if c.isalpha():
+                alpha_flag = True
+            elif c.isdigit():
+                digit_flag = True
         
-    # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'nmrtlpn'
-    processed = re.sub(r'(\+62 ((\d{3}([ -]\d{3,})([- ]\d{4,})?)\|(\d+)))\|(\(\d+\) \d+)\|\d{3}( \d+)+|(\d+[ -]\d+)\|\d+', 'nmrtlpn', processed)
+        if alpha_flag and digit_flag:
+            msg = msg.lower()
+            if msg[-4:] != 'ribu' and msg[-3:] != 'rbu' and msg[-2:] != 'rb':
+                for c in msg:
+                    if c == '1':
+                        c = 'i'
+                    elif c == '2':
+                        c = 's'
+                    elif c == '3':
+                        c = 'e'
+                    elif c == '4':
+                        c = 'a'
+                    elif c == '5':
+                        c = 's'
+                    elif c == '6':
+                        c = 'g'
+                    elif c == '7':
+                        c = 't'
+                    elif c == '8':
+                        c = 'b'
+                    elif c == '9':
+                        c = 'g'
+                    elif c == '0':
+                        c = 'o'
+                    new_word = new_word + c
+        
+        if new_word != '':
+            new_string = new_string + new_word + ' '
+        else:
+            new_string = new_string + msg + ' '
 
-    # Replace URLs with 'almtweb'
-    processed = re.sub(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', 'almtweb', processed)
-    processed = processed.replace('http', '')
-    processed = processed.replace('https', '')
+    return new_string
+
+def preproccess_text(text_messages):
+    # Convert if text is "alay"
+    processed = convertAlay(text_messages)
 
     # change words to lower case - Hello, HELLO, hello are all the same word
     processed = processed.lower()
+
+    # Replace email addresses with 'almtemail'
+    processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', ' almtemail ', processed)
+        
+    # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'nmrtlpn'
+    processed = re.sub(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' nmrtlpn ', processed)
+
+    # Replace URLs with 'almtweb'
+    processed = re.sub(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', ' almtweb ', processed)
+    processed = processed.replace('http', '')
+    processed = processed.replace('https', '')
     
     # Replace money symbols with 'symbuang' (£ can by typed with ALT key + 156)
     processed = re.sub(r'£|\$', 'symbuang ', processed)
@@ -40,11 +89,10 @@ def preproccess_text(text_messages):
     processed = processed.replace(' rp', ' symbuang ')
         
     # Replace numbers with 'noomr'
-    processed = re.sub(r'\d+(\.\d+)?', 'noomr', processed)
+    processed = re.sub(r'\d+(\.\d+)?', ' noomr ', processed)
 
     # Remove punctuation
     processed = re.sub(r'[.,\/#!%\^&\*;:+{}=\-_`~()?]', ' ', processed)
-    processed = re.sub(r'\s[a-z]\s', '', processed)
 
     # Replace whitespace between terms with a single space
     processed = re.sub(r'\s+', ' ', processed)
@@ -58,27 +106,26 @@ def preproccess_df(text_messages):
     processed = text_messages.str.lower()
 
     # Replace email addresses with 'almtemail'
-    processed = processed.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', 'almtemail')
+    processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', ' almtemail ', processed)
         
     # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'nmrtlpn'
-    processed = processed.str.replace(r'(\+62 ((\d{3}([ -]\d{3,})([- ]\d{4,})?)\|(\d+)))\|(\(\d+\) \d+)\|\d{3}( \d+)+\|(\d+[ -]\d+)\|\d+', 'nmrtlpn')
+    processed = processed.str.replace(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' nmrtlpn' )
 
     # Replace URLs with 'almtweb'
-    processed = processed.str.replace(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', 'almtweb')
+    processed = processed.str.replace(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', ' almtweb ')
     processed = processed.str.replace('http', '')
     processed = processed.str.replace('https', '')
     
     # Replace money symbols with 'symbuang' (£ can by typed with ALT key + 156)
-    processed = processed.str.replace(r'£|\$', 'symbuang ')
+    processed = processed.str.replace(r'£|\$', ' symbuang ')
     processed = processed.str.replace(' rp.', ' symbuang ')
     processed = processed.str.replace(' rp', ' symbuang ')
         
     # Replace numbers with 'noomr'
-    processed = processed.str.replace(r'\d+(\.\d+)?', 'noomr')
+    processed = processed.str.replace(r'\d+(\.\d+)?', ' noomr ')
 
     # Remove punctuation
     processed = processed.str.replace(r'[.,\/#!%\^&\*;:{}=\-_`~()?]', ' ')
-    processed = processed.str.replace(r'\s[a-z]\s', '')
 
     # Replace whitespace between terms with a single space
     processed = processed.str.replace(r'\s+', ' ')
@@ -93,6 +140,15 @@ f=open("indonesian_sent_tokenizer_corpus/indonesian-promotion-text.txt", "r")
 if f.mode == 'r':
     train_text = preproccess_text(f.read())
 f.close()
+
+path = 'indonesian_sent_tokenizer_corpus/tempo/txt'
+for foldername in os.listdir(path):
+    new_path = path + '/' + foldername
+    for filename in os.listdir(new_path):
+        f=open(new_path + '/' + filename, "r")
+        if f.mode == 'r':
+            train_text = train_text + ' ' + preproccess_text(f.read())
+        f.close()
 
 path = 'indonesian_sent_tokenizer_corpus/tempo/txt2'
 for foldername in os.listdir(path):
@@ -128,6 +184,10 @@ all_words = nltk.FreqDist(all_words)
 
 # use the 1500 most common words as features
 word_features = list(all_words.keys())[:1500]
+
+fa = open('word_features.pickle', 'wb')
+pickle.dump(word_features, fa)
+fa.close
 
 # The find_features function will determine which of the 1500 word features are contained in the review
 def find_features(message):
@@ -179,6 +239,9 @@ spam_msg = 0
 for name, model in models:
     nltk_model = SklearnClassifier(model)
     classifier = nltk_model.train(training)
+    f = open(name + ' Classifier.pickle', 'wb')
+    pickle.dump(classifier, f)
+    f.close
     result = classifier.classify(find_features(preproccess_text('hey')))
     if result == 0:
         normal_msg = normal_msg + 1
@@ -199,5 +262,3 @@ elif spam_msg >= normal_msg and spam_msg >= promo_msg:
 
 print("Algorithm Confidence = {}".format(confidence*100))
 print("Model thinks this is a {}".format(best_result))
-
-print(preproccess_text('+62 813-444-5555'))
