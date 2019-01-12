@@ -2,40 +2,48 @@ import os
 import re
 import sys
 import nltk
-from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
-from sklearn.preprocessing import LabelEncoder
 import random
 import pickle
-import pandas as pd
 import numpy as np
+import pandas as pd
+from sklearn.svm import SVC
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.preprocessing import LabelEncoder
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import RandomForestClassifier
+from nltk.classify.scikitlearn import SklearnClassifier
+from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
+from sklearn.linear_model import LogisticRegression, SGDClassifier
+from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 
 df = pd.read_csv('sms_classifier_corpus/data.txt', engine='python', sep="<%>", header=None)
 
 def preproccess_text(text_messages):
-    # change words to lower case - Hello, HELLO, hello are all the same word
-    processed = text_messages.lower()
-
     # Replace email addresses with 'almtemail'
-    processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', 'almtemail', processed)
+    processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', 'almtemail', text_messages)
+        
+    # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'nmrtlpn'
+    processed = re.sub(r'(\+62 ((\d{3}([ -]\d{3,})([- ]\d{4,})?)\|(\d+)))\|(\(\d+\) \d+)\|\d{3}( \d+)+|(\d+[ -]\d+)\|\d+', 'nmrtlpn', processed)
 
     # Replace URLs with 'almtweb'
     processed = re.sub(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', 'almtweb', processed)
     processed = processed.replace('http', '')
     processed = processed.replace('https', '')
+
+    # change words to lower case - Hello, HELLO, hello are all the same word
+    processed = processed.lower()
     
     # Replace money symbols with 'symbuang' (£ can by typed with ALT key + 156)
     processed = re.sub(r'£|\$', 'symbuang ', processed)
     processed = processed.replace(' rp.', ' symbuang ')
     processed = processed.replace(' rp', ' symbuang ')
         
-    # Replace 10 digit phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'phonenumber'
-    processed = re.sub(r'^\(?[\d]{3}\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$', 'nmrtlpn', processed)
-        
     # Replace numbers with 'noomr'
     processed = re.sub(r'\d+(\.\d+)?', 'noomr', processed)
 
     # Remove punctuation
-    processed = re.sub(r'[.,\/#!%\^&\*;:{}=\-_`~()?]', ' ', processed)
+    processed = re.sub(r'[.,\/#!%\^&\*;:+{}=\-_`~()?]', ' ', processed)
     processed = re.sub(r'\s[a-z]\s', '', processed)
 
     # Replace whitespace between terms with a single space
@@ -51,6 +59,9 @@ def preproccess_df(text_messages):
 
     # Replace email addresses with 'almtemail'
     processed = processed.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', 'almtemail')
+        
+    # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'nmrtlpn'
+    processed = processed.str.replace(r'(\+62 ((\d{3}([ -]\d{3,})([- ]\d{4,})?)\|(\d+)))\|(\(\d+\) \d+)\|\d{3}( \d+)+\|(\d+[ -]\d+)\|\d+', 'nmrtlpn')
 
     # Replace URLs with 'almtweb'
     processed = processed.str.replace(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', 'almtweb')
@@ -61,9 +72,6 @@ def preproccess_df(text_messages):
     processed = processed.str.replace(r'£|\$', 'symbuang ')
     processed = processed.str.replace(' rp.', ' symbuang ')
     processed = processed.str.replace(' rp', ' symbuang ')
-        
-    # Replace 10 digit phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'phonenumber'
-    processed = processed.str.replace(r'^\(?[\d]{3}\)?[\s-]?[\d]{3}[\s-]?[\d]{4}$', 'nmrtlpn')
         
     # Replace numbers with 'noomr'
     processed = processed.str.replace(r'\d+(\.\d+)?', 'noomr')
@@ -117,8 +125,6 @@ for message in sms_data:
         all_words.append(w)
         
 all_words = nltk.FreqDist(all_words)
-print('Number of words: {}'.format(len(all_words)))
-print('Most common words: {}'.format(all_words.most_common(10)))
 
 # use the 1500 most common words as features
 word_features = list(all_words.keys())[:1500]
@@ -148,34 +154,7 @@ featuresets = [(find_features(text), label) for (text, label) in messages]
 from sklearn import model_selection
 
 # split the data into training and testing datasets
-training, testing = model_selection.train_test_split(featuresets, test_size = 0.25, random_state=seed)
-
-print(len(training))
-print(len(testing))
-
-
-# We can use sklearn algorithms in NLTK
-from nltk.classify.scikitlearn import SklearnClassifier
-from sklearn.svm import SVC
-
-model = SklearnClassifier(SVC(kernel = 'linear'))
-
-# train the model on the training data
-a = model.train(training)
-
-# and test on the testing dataset!
-accuracy = nltk.classify.accuracy(model, testing)*100
-print("SVC Accuracy: {}".format(accuracy))
-
-
-
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.linear_model import LogisticRegression, SGDClassifier
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.svm import SVC
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+training = featuresets
 
 # Define models to train
 names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier",
@@ -193,41 +172,32 @@ classifiers = [
 
 models = zip(names, classifiers)
 
+normal_msg = 0
+promo_msg = 0
+spam_msg = 0
+
 for name, model in models:
     nltk_model = SklearnClassifier(model)
-    nltk_model.train(training)
-    accuracy = nltk.classify.accuracy(nltk_model, testing)*100
-    print("{} Accuracy: {}".format(name, accuracy))
+    classifier = nltk_model.train(training)
+    result = classifier.classify(find_features(preproccess_text('hey')))
+    if result == 0:
+        normal_msg = normal_msg + 1
+    elif result == 1:
+        promo_msg = promo_msg + 1
+    elif result == 2:
+        spam_msg = spam_msg + 1
     
-# Ensemble methods - Voting classifier
-from sklearn.ensemble import VotingClassifier
+if normal_msg >= promo_msg and normal_msg >= spam_msg:
+    best_result = "normal message"
+    confidence = normal_msg / (normal_msg + promo_msg + spam_msg)
+elif promo_msg >= normal_msg and promo_msg >= spam_msg:
+    best_result = "promotion message"
+    confidence = promo_msg / (normal_msg + promo_msg + spam_msg)
+elif spam_msg >= normal_msg and spam_msg >= promo_msg:
+    best_result = "spam message"
+    confidence = spam_msg / (normal_msg + promo_msg + spam_msg)
 
-names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier",
-         "Naive Bayes", "SVM Linear"]
+print("Algorithm Confidence = {}".format(confidence*100))
+print("Model thinks this is a {}".format(best_result))
 
-classifiers = [
-    KNeighborsClassifier(),
-    DecisionTreeClassifier(),
-    RandomForestClassifier(),
-    LogisticRegression(),
-    SGDClassifier(max_iter = 100),
-    MultinomialNB(),
-    SVC(kernel = 'linear')
-]
-
-models = list(zip(names, classifiers))
-
-nltk_ensemble = SklearnClassifier(VotingClassifier(estimators = models, voting = 'hard', n_jobs = -1))
-nltk_ensemble.train(training)
-accuracy = nltk.classify.accuracy(nltk_model, testing)*100
-print("Voting Classifier: Accuracy: {}".format(accuracy))
-
-### make class label prediction for testing set
-##txt_features, labels = list(zip(*testing))
-##
-##prediction = nltk_ensemble.classify_many(txt_features)
-### print a confusion matrix and a classification report
-##print(classification_report(labels, prediction))
-
-classifier = nltk.NaiveBayesClassifier.train(training)
-print(classifier.classify(find_features(preproccess_text('INGIN SELESAIKAN MASALAH SEPERTI 1.banyak hutang 2.Biayah rumah tangga 3.Buka usaha solusinya whatsappp; 082338028568 At klik di; www.bebasakses18.blogspot.com'))))
+print(preproccess_text('+62 813-444-5555'))
