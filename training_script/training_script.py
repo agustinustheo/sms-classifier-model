@@ -17,10 +17,8 @@ from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
 from sklearn.linear_model import LogisticRegression, SGDClassifier
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 
-df = pd.read_csv('corpus/sms_corpus/data.txt', engine='python', sep="<%>", header=None)
-
 # Indonesian SMS Preprocessing
-def convertTackyText(text):
+def convert_tacky_text(text):
     words = word_tokenize(text)
     new_string = ''
     for msg in words:
@@ -66,9 +64,60 @@ def convertTackyText(text):
 
     return new_string
 
+def convert_tacky_text_df(df):
+    for text in df:
+        words = word_tokenize(text)
+        new_string = ''
+        for msg in words:
+            new_word = ''
+            alpha_flag = False
+            digit_flag = False
+            for c in msg:
+                if c.isalpha():
+                    alpha_flag = True
+                elif c.isdigit():
+                    digit_flag = True
+            
+            if alpha_flag and digit_flag:
+                msg = msg.lower()
+                if msg[-4:] != 'ribu' and msg[-3:] != 'rbu' and msg[-2:] != 'rb':
+                    for c in msg:
+                        if c == '1':
+                            c = 'i'
+                        elif c == '2':
+                            c = 's'
+                        elif c == '3':
+                            c = 'e'
+                        elif c == '4':
+                            c = 'a'
+                        elif c == '5':
+                            c = 's'
+                        elif c == '6':
+                            c = 'g'
+                        elif c == '7':
+                            c = 't'
+                        elif c == '8':
+                            c = 'b'
+                        elif c == '9':
+                            c = 'g'
+                        elif c == '0':
+                            c = 'o'
+                        new_word = new_word + c
+            
+            if new_word != '':
+                new_string = new_string + new_word + ' '
+            else:
+                new_string = new_string + msg + ' '
+
+        text = new_string
+    return df
+
 def preproccess_text(text_messages):
     # change words to lower case
     processed = text_messages.lower()
+    
+    # Remove tacky text
+    processed = convert_tacky_text(processed)
 
     # Replace email addresses with 'emailaddress'
     processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', ' emailaddress ', processed)
@@ -104,7 +153,7 @@ def preproccess_df(text_messages):
     processed = text_messages.str.lower()
     
     # Remove tacky text
-    processed = convertTackyText(processed.str)
+    processed = convert_tacky_text_df(processed)
 
     # Replace email addresses with 'emailaddress'
     processed = processed.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', ' emailaddress ')
@@ -192,7 +241,7 @@ id_token = open('../sms_classifier_pickle/indonesian_sent_tokenizer.pickle', 'wb
 pickle.dump(indonesian_sent_tokenizer, id_token)
 id_token.close
 
-# create bag-of-words
+# Create bag-of-words
 all_words = []
 
 for message in sms_data:
@@ -202,7 +251,7 @@ for message in sms_data:
         
 all_words = nltk.FreqDist(all_words)
 
-# use the 1500 most common words as features
+# Use the 1500 most common words as features
 word_features = list(all_words.keys())[:1500]
 
 fa = open('../sms_classifier_pickle/word_features.pickle', 'wb')
@@ -213,6 +262,8 @@ fa.close
 # word_features_f = open("word_features.pickle", "rb")
 # word_features = pickle.load(word_features_f)
 # word_features_f.close()
+
+df = pd.read_csv('corpus/sms_corpus/data.txt', engine='python', sep="<%>", header=None)
 
 classes = df[0]
 sms_data = preproccess_df(df[1])
