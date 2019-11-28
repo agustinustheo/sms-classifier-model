@@ -1,0 +1,34 @@
+GPS, Alat Pengamanan Tambahan Kereta Api  LAPORAN IPTEK
+
+KECELAKAAN demi kecelakaan menimpa kereta api kita, berturut-turut dengan pola sama, pelanggaran sinyal. Melanggar sinyal berarti melanggar larangan masuk stasiun karena stasiun dalam keadaan tidak aman karena beberapa hal. Misalnya ada kereta yang sedang langsir, pindah dari satu jalur ke jalur lain, atau belum ada jalur kosong karena semua jalur di stasiun terisi kereta lain yang salah satunya akan diberangkatkan.
+
+Berbagai upaya tambahan dilakukan oleh manajemen PT Kereta Api Indonesia (KAI), selain mengaktifkan alat-alat pengaman yang sebenarnya sudah ada, baik di dalam lokomotif sendiri maupun di jalur. Sistem pengamanan perkereta-apian di mana pun sebenarnya sudah standar dan digunakan di mana-mana, yaitu adanya deadman pedal di dalam lokomotif, dan sistem persinyalan di jalurnya.
+
+Di banyak negara, juga di Indonesia yang mewarisi sistem perkereta-apian Belanda, pengaman di lokomotif berupa pedal yang harus diinjak dan dilepas secara periodik oleh masinis. Di beberapa negara lain, pengaman yang sama tidak berupa pedal, tetapi berupa lingkaran kedua di lingkar kemudi (steering column) yang berfungsi sebagai akselerator/throttle.
+
+Pedal ini kalau terlalu lama diinjak atau terlalu lama dilepas akan mengaktifkan alarm yang bunyinya melengking. Jika dibiarkan juga, hanya dalam hitungan detik sistem rem kereta otomatis bekerja sehingga kereta akan berhenti. Karena fungsinya sangat strategis, semestinya deadman pedal masuk kategori no go item, atau alat yang harus ada kalau lokomotif dioperasikan. 
+
+Bila masinis lalai atau mengantuk, mestinya kereta api akan berhenti secara otomatis. Jika deadman pedal tidak berfungsi dan masinis terlelap, kereta akan berjalan terus meski ada halangan di depan dan seperti di Cirebon, ia menabrak lokomotif lain, dan masinisnya menjadi deadman.
+
+Di jalur, ada sistem persinyalan yang merupakan rambu-rambu yang tidak berakibat langsung apa-apa pada kereta kalau dilanggar dan di depan tak ada halangan. Seperti lampu lalu lintas di  persimpangan jalan, sinyal menunjukkan warna-warni yang semua punya arti, meskipun di beberapa bagian PT KAI masih menggunakan sistem persinyalan lengan yang diberi lampu hanya pada malam hari.
+
+Beda dengan lampu lalu lintas yang hanya ada sebuah di tiap menjelang persimpangan jalan, di kereta api sedikitnya ada tiga. Sinyal muka yang jaraknya dari stasiun antara 700 meter hingga 1.000 meter lebih, lalu sinyal masuk yang jaraknya sekitar 350 meter dari stasiun, lalu sinyal luar yang berada di selewat stasiun untuk memberi tanda bahwa kereta boleh meninggalkan stasiun atau tidak.
+
+Sama dengan lampu lalu lintas, lampu sinyal elektrik berwarna hijau, merah, dan kuning. Hanya saja warna hijaunya justru di atas dan kuning di bawah. Persinyalan elektrik yang komplet juga menyiapkan panel kontrol di meja PK (pusat kontrol) yang menampilkan peta jalan KA, lengkap dengan lampu-lampu yang cahayanya berjalan sesuai dengan pergerakan kereta.
+
+Dengan sistem persinyalan elektrik, petugas pusat kontrol bisa tahu keberadaan kereta dan bisa meminta masinis untuk mempercepat atau melambatkan kereta lewat radio. Radio komunikasi ini pula yang bisa membangunkan masinis kalau PK melihat ada yang tidak beres, meski tidak jarang masinis mengecilkan suara radionya sehingga tidak cukup mengejutkannya. Ada lagi, PK bisa mengaktifkan alarm yang ditambahkan di lokomotif kalau ada kecenderungan pelanggaran sinyal, yang disebut radio stop atau lokomotif stop.
+
+PT INKA saat ini sedang membangun dua set KRL (kereta rel listrik) yang dilengkapi tambahan pengamanan berupa GPS (global positioning system). Alat ini diharapkan dapat memberi informasi akurat tentang keberadaan kereta dan kecepatannya.
+
+GPS yang juga digunakan di - tidak semua - pesawat udara atau kapal laut, sangat membantu upaya keselamatan alat angkutan. GPS yang dipandu tiga sampai empat satelit, dari 24 satelit di seluruh angkasa kita, bisa memberi informasi yang sangat akurat. 
+
+Pengalaman sebagai pilot, dengan GPS saya merasa lebih percaya diri dalam menerbangkan pesawat. GPS mampu memberi informasi ke mana arah pesawat yang benar ke tujuan, berapa lama penerbangan sebelum sampai ke bandara tujuan, sampai kecepatan nyata pesawat (ground speed), kecepatan angin depan (head wind) atau angin dorong (tail wind) atau angin silang (cross wind). Bahkan, GPS bisa menampilkan peta bumi secara kasar di layarnya sehingga kita bisa tahu apakah di bawah ada jalan raya, atau sungai sebagai check point kalau diprogram lebih dulu (preflight).
+
+Di pesawat terbang, kalau GPS lebih diarahkan untuk memberi informasi kepada penerbang, ada lagi alat untuk memberi informasi kepada menara kontrol yang disebut transponder. Transponder yang datanya dipancarkan oleh pesawat yang melakukan squawk memberi informasi yang sama kepada menara. Misalnya kecepatan dan ketinggian pesawat serta posisinya secara tepat sehingga pengawas bisa mengatur agar tidak terjadi tabrakan pesawat.
+
+GPS juga sudah digunakan untuk jalan raya yang dipasang di dashboard mobil sehingga pengemudi tahu jalan terbaik ke satu tujuan. Dan, yang lebih canggih, suara yang keluar dari alat yang dilengkapi GPS ini bisa memandu, misalnya kita salah jalan dan ia menyarankan memutar balik, atau berbelok di tikungan di depan. Sama dengan GPS pesawat, GPS untuk mobil ini bisa memberi informasi berapa lama perjalanan yang dibutuhkan untuk ke satu tujuan di dalam kota, setelah GPS memantau kecepataan kendaraan.
+
+GPS di lokomotif diharapkan memberi informasi akurat keberadaan kereta, persisnya sampai di mana yang akurasinya sampai kurang dari 10 meter. Dari informasi GPS, ketersediaan jalur di stasiun dan keberadaan kereta di depan serta belakangnya, pusat kontrol dapat mengatur operasi kereta sehingga lebih aman dan efisien.
+
+Berbekal informasi GPS, pusat kontrol KA memberi peringatan kepada masinis jika ada halangan di depan, misalnya kalau stasiun masih belum aman karena masih ada kereta. Dengan informasi GPS yang dipancarkan lokomotif ke pusat kontrol, kemungkinan kereta menabrak kereta lain, baik dari belakang atau head to head bisa dicegah. (Moch S Hendrowijono)
+

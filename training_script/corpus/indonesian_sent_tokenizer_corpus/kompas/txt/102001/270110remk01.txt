@@ -1,0 +1,42 @@
+Rem KA Memang Rawan Gangguan  LAPORAN IPTEK
+
+PERISTIWA Rangkasbitung, 25 Oktober dini hari, mengingatkan beberapa orang kepada peristiwa mirip beberapa tahun lalu, antara Stasiun Sragen dan Madiun. Kala itu rangkaian kereta kelas ekonomi terjungkal ke dasar sungai dan sejumlah orang tewas.
+
+Kemiripan dimaksud adalah, kedua kereta api tidak terkendali, masinis tidak bisa menghentikan keretanya. Tetapi, pada peristiwa di perbatasan Jawa Tengah-Jawa Timur (Jateng-Jatim) itu, masinis tidak tahu bahwa rangkaian kereta yang ditarik lokomotifnya tidak bisa direm.
+
+Saat itu yang menjadi Dirjen Perhubungan Darat adalah Sujono dan Dirut Perumka Anwar Suprijadi. Pemerintah cuma mengumumkan, kereta api terjungkal karena anjlok, keluar dari relnya, dan masalahnya lalu dianggap selesai.
+
+Padahal, hasil penelitian mendalam menyebutkan, rangkaian kereta tidak bisa dikendalikan karena remnya blong. Akibatnya, ketika lokomotif melakukan pengereman, ia "disundul" rangkaian di belakangnya. Sebetulnya tidak semua kereta blong remnya, hanya -kalau tidak salah- blong di tiga kereta paling belakang, sementara rem di dua atau tiga kereta di belakang lokomotif berfungsi normal.
+
+Di Rangkasbitung, peristiwa naas KA No 930 juga sama. Cuma saja, semua kereta di belakang lokomotif remnya tidak berfungsi, sehingga masinis sama sekali tidak bisa menghentikan keretanya. Kalau saja di depan tidak ada rangkaian KA 2123 yang mengangkut batu bara dari Cigading, tentu KA No 930 tadi akan meluncur terus sampai gaya dorongnya habis. Nyatanya KA 2123 itu "menghentikan" KA 930 lewat satu benturan keras yang diakibatkan oleh kecepatan KA 930 yang saat itu masih sekitar 50-60 km per jam.
+
+SISTEM pengereman pada kereta api beda dengan pada kendaraan lain, walau mungkin masih ada mobil yang memakai rem angin. Di sistem kereta api kita, digunakan angin (air brake), sementara pada lokomotif umumnya sistem hidrolik dan dynamic brake.
+
+Pada dekade sebelum tahun 60-an, atau 70-an, kereta api kita menggunakan sistem pengereman udara kosong (vacuum) -yang kemudian menimbulkan istilah rem yang pakem- tetapi kini umumnya menggunakan pengisian udara. Cara kerjanya, lokomotif pada sistem pakem tadi mengisap udara-udara dalam tabung rem di kereta-kereta sehingga vakum. Tabung rem itu akan bekerja, mengikat rem ke roda sehingga kereta mengerem kalau ada udara yang masuk. 
+
+Tekanan udara luar yang cuma satu atmosfer ini dianggap kurang kuat menghentikan laju kereta sehingga sistem rem pakem ditinggalkan. Kini kereta api umumnya menggunakan rem angin yang ditiupkan, sehingga berapa besar tenaga pengeremannya bisa diatur dari lokomotif lewat satu kompresor.
+
+Di sistem pengereman kereta sendiri ada tiga bagian yang tidak terpisahkan, yaitu pipa utama, tabung (reservoir), dan silinder rem. Pipa utama tugasnya mengalirkan udara dari kompresor lokomotif ke tabung dan tabung menyimpan udara itu untuk sewaktu-waktu dialirkan ke silinder rem lewat satu katup otomatis. 
+
+Kompresor lokomotif meniupkan udara dengan tekanan sekitar lima atmosfer ke tabung rem kereta lewat pipa utama seukuran selang radiator mobil. Kalau udara yang dikirim dari kompresor dikurangi, maka katup otomatis mengatur udara dari tabung tadi masuk ke silinder rem dan membuat rem tertekan dan mengikat roda. Masinis mengatur tekanan pipa dari tuas rem yang dia kontrol, selain tuas akselerator, mengurangi tekanan udara untuk mengerem, dan memasukkan lagi udara untuk melepaskan rem.
+
+Selain akibat didorong dari kompresor lokomotif dan tabung angin, sistem rem di kereta juga akan membuat sepatu rem mengikat roda tanpa diatur masinis. Ini bisa terjadi, misalnya, kalau sambungan pipa antarkereta atau antara kereta dengan lokomotif terlepas dan tekanan udara turun. Pipa utama yang putus atau terbuka akan membuat tekanan udara menjadi rendah, di bawah lima atmosfer, sehingga tabung reservoir mengirim angin ke silinder rem dan mengikat roda.
+
+Namun, rem tidak akan bekerja justru kalau katup pipa utama  yang ada di ujung-ujung kereta malah ditutup (ditumbeng) sehingga tidak ada angin yang masuk atau keluar. Ini karena tekanan udara yang ada di dalam pipa utama di kereta tidak berubah atau tidak berkurang sehingga reservoir tak mengalirkan udara ke silinder rem.
+
+CATATAN menyebutkan, anjloknya kereta di perbatasan Jateng-Jatim itu akibat pipa utama tiga kereta terakhir ditumbeng sehingga kereta tidak punya rem lagi. Petugas penyelidik internal PT Kereta Api Indonesia (KAI) mendapati, katup pipa utama di kereta di belakang lokomotif KA 930 juga dalam keadaan ditumbeng sehingga masinis tidak bisa mengerem.
+
+Kedua peristiwa amat mirip, meski bedanya masinis KA di Jateng-Jatim itu tidak tahu rem kereta di belakangnya ditumbeng. Masinis KA 930 tahu persis, tetapi tak berani mengerem lokomotifnya karena akan membuat semua rangkaian terjungkal -kereta belakang menabrak kereta di depannya- dengan akibat semua penumpang celaka. 
+
+Bisa dibayangkan kalau lokomotif diesel hidrolik jenis BB 303 yang beratnya sekitar 44 ton itu ditubruk oleh enam kereta KRD klontongan yang masing-masing 50 ton, atau keseluruhan 300 ton. Massa seberat 344 ton itu kalau melaju awal 50 km per jam saja, lalu idle, baru akan berhenti sendiri di jalan datar pada jarak tujuh kilometer dan kalau direm, baru akan berhenti pada jarak 700 meter.
+
+Masinis berharap, kereta akan berhenti sendiri, mungkin sampai 10 km akibat gaya dorongnya, dan untuk mengurangi korban di luar kereta ia membunyikan peluit berkali-kali dan mengedip-kedipkan lampu. Belum jelas apakah masinis tahu di depannya ada kereta lain, apalagi jam-jam itu (02.48) merupakan jam operasi yang asing baginya, karena biasanya jam kerjanya berakhir pada pukul 23.00.
+
+Hingga sekarang belum diketahui, siapa yang menumbeng rem KA di Jateng-Jatim itu, juga siapa yang melakukan hal sama di KA 930. Kenyataannya, sistem rem masih bekerja baik sebelum KA lepas Stasiun Citeras, sekitar tujuh kilometer sebelum Rangkasbitung. Bisa saja orang iseng karena kesal keretanya sangat terlambat, tetapi bisa juga orang sengaja dan memilih petak jalan terakhir dengan perkiraan, penumpangnya sudah tinggal sedikit.
+
+Bagaimanapun, ada dua masalah yang harus diperhatikan, baik oleh pemerintah maupun PT KAI. Yang pertama, kenyataan bahwa sistem kontrol rem berupa katup di pipa utama tadi sangat mudah dijangkau oleh siapa saja. Malah, kadang kala orang yang memanjat untuk naik ke atap menginjak katup di sambungan kereta ini.
+
+Hal kedua, sistem pengereman kereta api kita, 90 persen menggunakan produk Knorr yang lisensinya dipegang PT Pindad dari Bandung, sisanya menggunakan sistem pengereman Westinghouse. Celakanya, Westinghouse tidak lagi memproduksi sistem yang masih kita gunakan, dan kalaupun kita memesan suku cadangnya, mereka akan membuatnya secara khusus sehingga mahal. Karena itu, komponen yang bisa dibuat di Balai Yasa (bengkel) bisa diadakan sendiri, tetapi untuk komponen utama acapkali dilakukan kanibal. 
+
+Lebih celaka lagi, KRD klontongan KA 930 itu menggunakan pengereman Westinghouse, sama dengan yang digunakan di gerbong-gerbong barang tua. Tetapi, bagi PT KAI, lebih ringan merilis pernyataan bahwa peristiwa Rangkasbitung adalah akibat tangan jahil atau sabotase, ketimbang mengakui bahwa sistem pengereman KA mereka sudah tidak sempurna lagi.  
+

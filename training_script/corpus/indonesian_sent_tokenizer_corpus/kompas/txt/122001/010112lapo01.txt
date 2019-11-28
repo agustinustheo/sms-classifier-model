@@ -1,0 +1,40 @@
+LAPORAN IPTEK    Tommy Terjebak Ponselnya Sendiri
+
+BERITA tertangkapnya Hutomo Mandala Putra atau yang lebih dikenal dengan Tommy
+
+Soeharto hari Rabu, 28 November 2001, sebetulnya tidak terlalu mengejutkan. Malah sebagian masyarakat kesal karena polisi perlu waktu begitu lama -hampir 13 bulan- untuk membekuk Tommy. Namun bagaimanapun, pembekukan Tommy tanpa mengorbankan setetes darah pun patutlah diacungi jempol.
+
+Menelisik keberadaan Tommy, menurut orang yang paham teknologi dan bukannya dari isyarat-isyarat paranormal, sebetulnya relatif mudah. Apalagi kalau Tommy juga memanfaatkan teknologi yang, selain memudahkan kehidupan, ternyata juga "mencelakakan". Paling tidak akibat pemakaian teknologi itu Tommy bisa tertangkap.
+
+Ingat kasus Dzhokar Dudayev, Presiden Republik Chechnya, yang dirudal oleh pasukan Rusia triwulan pertama tahun 1996? Rusia juga perlu waktu 16 bulan untuk tahu persis posisi Dudayev sebelum mengirimkan rudal udara ke darat yang dibimbing sinar laser.
+
+Pada saat itu Dudayev baru saja menggunakan telepon seluler (ponsel) satelitnya dan posisinya diketahui persis lewat satelit komunikasi itu, karena ponselnya sekaligus juga mengirim koordinat posisinya. Akurasi posisi pemakai telepon satelit didapat dari GPS (global positioning system) yang datanya justru didapat dari serangkaian satelit pengindera milik militer Amerika Serikat.
+
+Sinyal ponsel memang urusan satelit Inmarsat, khusus untuk membangun hubungan komunikasi antara ponsel satelit di Bumi dengan nomor-nomor lain, baik ke ponsel satelit lain, ke nomor ponsel GSM, atau ke PSTN (public switch telephone network-telepon meja kita). Tetapi, sinyal yang menyebutkan posisi dari GPS inilah yang ditangkap aparat intel Rusia untuk mengidentifikasi posisi Dudayev, sehingga pesawat-pesawat tempur mereka bisa mengirim rudal.
+
+Tidak mudah untuk tahu nomor ponsel satelit Dudayev, lebih rumit lagi mengetahui posisinya, sebab proses identifikasi memakan waktu. Acapkali Dudayev diketahui dengan berkomunikasi lewat ponsel satelitnya, tetapi ketika proses pelacakan sedang dilakukan, ponsel dimatikan sehingga pelacak kehilangan jejak.
+
+Demikian berkali-kali, sampai pada hari sialnya Dudayev terlalu lama bicara sehingga posisinya "dikunci" dan rudal penghancur dikirim. GPS sangat berjasa, sebab akurasi posisi yang dikirimkannya sangat tinggi; kesalahannya hanya bilangan di bawah empat meter. Karena itu, meski datanya meleset sampai 10 meter pun, namanya rudal, ya, tetap bisa menghancurkan sekitarnya yang beradius 20 meter.
+
+KASUS Tommy juga sama. Hanya saja, yang digunakan adalah ponsel GSM (global system for mobile communication) seperti yang kita gunakan umumnya saat ini, tanpa GPS. Semua ponsel dalam beroperasi selalu memancarkan data IMEI (international mobile equipment identification nomor identifikasi ponsel yang berlaku internasional), juga ESN (electronic subscriber number-nomor pelanggan). IMEI dan ESN ditangkap oleh yang namanya CPC (cellular processing center) untuk diketahui keabsahannya, baik dari data pelanggan maupun ponselnya, resmi atau tidak, sebelum komunikasi bisa diteruskan.
+
+Dalam proses komunikasi seluler, ponsel mentransmisikan komunikasi ke BTS (base transceiver station) atau juga disebut RBS (radio base station) terdekat, yang berupa sel-sel. Tetapi kalau BTS atau sel terdekat penuh karena semua kanal terpakai, BTS terdekat kedua yang akan menanganinya, demikian seterusnya. 
+
+Kalau semua BTS penuh, komunikasi tak akan terjadi atau kalau sedang berjalan sehingga terjadi oper-operan (handover) BTS, akan terjadi drop call. Oper-operan oleh BTS, karena BTS penuh atau sinyal yang dikirim ponsel lemah, terasa oleh pengguna dengan bunyi tang-tung-tang-tung, bagai bicara dalam gentong.
+
+BTS ini mempunyai radius liputan tertentu, dan BTS biasa (makrosel) di daerah sedang, liputannya antara 800 meter sampai dua kilometer. Di daerah padat, operator memasang mikrosel, indoor atau pico yang liputannya cuma sekitar 200 meter.
+
+Dari data IMEI dan ESN yang dikirimkan ke CPC lewat BTS, operator bisa tahu keberadaan ponsel, berdasarkan BTS mana yang meliputnya. Dari cek silang dengan tiga BTS berdekatan, keberadaan ponsel bisa diketahui agak mendekati akurat, apalagi kalau BTS yang meliputnya adalah mikrosel yang radiusnya sempit.
+
+Bisa diketahui juga jauh dekatnya jarak ponsel ke BTS dari kuat-lemahnya sinyal yang dikirim, meski itu juga tergantung di tempat terbuka atau di dalam gedung. Tetapi, kalau tiga BTS sama-sama memantau dan melayaninya, dan dibuat garis silang, akan diketahui lokasi ponsel yang sedang melakukan komunikasi.
+
+Keberadaan Tommy juga bisa dilacak demikian, dan hampir berhasil ketika Tommy sempat tinggal di Alam Segar, Pondok Indah. Namun, karena pencocokan data dan perhitungan akurasi memerlukan data lebih banyak -artinya harus lebih banyak lagi ponsel Tommy memanggil- maka ketika Alam Segar "dikunci", Tommy sudah kabur.
+
+PERLU waktu lama untuk tahu nomor-nomor ponsel yang digunakan Tommy dan titik terang mulai terbuka ketika orang-orang dekatnya -yang diduga membunuh hakim agung Syafiuddin Kartasasmita- ditangkap. Data percakapan yang bisa didapat -atas nama hukum- oleh polisi dari operator mengarah ke nomor-nomor yang biasa digunakan Tommy, meskipun komunikasi dilakukan sudah beberapa waktu berselang.
+
+Tommy bisa saja mengganti nomor-nomor ponselnya, tetapi selama ponselnya itu-itu juga dan IMEI-nya sudah diketahui, ia menjadi mudah dilacak. Pemakai ponsel lain bisa dikibuli dari nomor yang berganti-ganti, tetapi CPC di sentralnya operator tidak, karena IMEI-nya tetap, kecuali kalau Tommy juga ganti ponsel. Juga kalau Tommy memanfaatkan feature number hiding sehingga nomornya tidak muncul di ponsel lawan, karena ESN-nya tetap tampil di CPC.
+
+Hanya saja, untuk akurasi, memang perlu beberapa kali percakapan dengan waktu yang cukup sehingga bisa dihitung kira-kira jarak berapa jauh ia dari BTS-BTS yang meliputnya. Proses pelacakan menjadi lama, tetapi tidak selama Rusia melacak Dudayev, karena Tommy melakukan komunikasi tidak cuma dari satu tempat.
+
+Kasus pelacakan dan penangkapan Tommy juga bisa jadi pelajaran bagi yang suka bohong tentang keberadaannya. Teknologi seluler buktinya bisa memastikan keberadaan si pembohong dari sinyal yang dikirimkan ponselnya. 
+

@@ -1,0 +1,38 @@
+Virus Vs Antivirus, Perang yang Tak Pernah Usai  LAPORAN IPTEK
+
+SEJAK mulai maraknya penggunaan komputer, terutama dengan munculnya sistem operasi Windows tahun 1980-an, pengembangan dan penyebaran virus oleh para hacker ternyata turut berkembang.
+
+Dibandingkan sistem operasi lain, apa yang dikembangkan perusahaan piranti lunak Amerika Serikat ini memang paling sering diserang virus. Seperti diakui Director of Microsoft Services Indonesia Sugiharto Jakinsjah, secanggih apa pun program yang dikembangkan, selalu saja ada celah yang dapat dilihat para hacker yang kemudian membuat program virus penembusnya. 
+
+Setiap bulan selalu muncul virus-virus baru yang siap mengobrak-abrik dan menghancurkan program bila si pengguna komputer lengah atau lupa men-scan program. Upaya yang ditawarkan perusahaan-perusahaan piranti lunak untuk menangkal aksi para hacker dari berbagai negara di dunia adalah menyediakan program antivirus yang dapat diakses dan diambil secara gratis dari situs web milik perusahaan tersebut, yang setiap saat juga diperbarui. 
+
+Keamanan Internet dan tingkat ancaman yang datang melalui berbagai virus, menurut Sugiharto, berdampak pada dunia bisnis di seluruh dunia, tidak terbatas pada apa pun platform yang dipakai. Untuk menanggapi hal itu, Microsoft Corporation bulan November lalu meluncurkan inisiatif baru yang disebut Strategic Technology Protection Program (STPP), program untuk membantu para pelanggan get secure and stay secure.
+
+Microsoft, Selasa (4/12) lalu, di Jakarta memperkenalkan inisiatif tersebut pada acara Security Day untuk membantu para pelanggan yang berada di Indonesia untuk mendapatkan jaminan keamanan dan selalu berada dalam kondisi aman, yang disebut dengan istilah Get Secure and Stay Secure.
+
+"Strategic Technology Protection Program atau STPP merupakan program yang terdiri dari dua tahap yang merupakan bagian dari komitmen perusahaan yang terus dijalankan," jelas Sugiharto.
+
+Tahap pertama dari program Microsoft Srategic Technology Protection Program adalah, Get Secure, yang termasuk di dalamnya adalah pemberian secara cuma-cuma produk yang berkaitan dengan virus; Security Tool Kit yang didapat secara on-line, termasuk lockdown tool yang mudah digunakan untuk Microsoft Windows 2000 Server Internet Information Services (IIS); dan perwakilan Microsoft yang tersebar secara global yang dapat mencapai para pelanggan di seluruh dunia.
+
+Sedangkan tahap kedua adalah program jangka panjang, yaitu Stay Secure, yang akan menyediakan kepada para pelanggan berbagai alat, teknologi, dan sumber daya yang mereka butuhkan untuk selalu aman. Sebagai bagian dari tahap Stay Secure, Microsoft akan memberikan versi lanjutan dari IIS locked down sebagai standar, menyediakan pelanggan dengan alat yang secara otomatis dapat menggunakan dan mengamankan IIS untuk memenuhi kebutuhan komputerisasi bisnis mereka.
+
+Virus-virus
+
+Virus-virus yang dikembangkan saat ini memang dapat menyerang semua pelanggan dan semua platform. Aksi para hacker memang tidak dapat dihentikan. Mereka membuat dan mendistribusikan kode-kode yang merusak melalui Internet. Untuk menangkalnya, perusahaan-perusahaan piranti lunak komputer harus melengkapi pelanggannya dengan alat, teknologi, dan dukungan yang dapat memproteksi sistem mereka. 
+
+"Inisiatif Strategic Technology Protection Program adalah langkah awal untuk memenuhi kebutuhan tersebut saat ini dan untuk menjamin keamanan di Internet," jelas Andrew McBean, Presdir PT Microsoft Indonesia. 
+
+Kategori virus yang beredar umumnya meliputi virus Parasitic, Bootstrap Sector, Multi-Partite, Companion, Link, dan virus Data File. Virus Parasitic menyerang file atau program yang dapat dieksekusi dalam komputer. Virus ini tinggal pada program tuan rumah (host program), tidak terubah tetapi menambah pada program induk dengan cara tertentu yang membuat kode virus akan dijalankan lebih dulu. Virus-virus tersebut dapat juga beraksi langsung (direct-action) atau menetap (resident). 
+
+Virus yang beraksi langsung memilih satu atau lebih program untuk berjangkit setiap saat program dijalankan. Virus yang menetap bersembunyi dalam memori komputer dan berjangkit pada program utama ketika program dijalankan.
+
+Virus Bootstrap Sector menetap pada bagian pertama dari hard disk atau disket, yang dikenal dengan boot sector, dan menggantikan program-program yang menyimpan informasi tentang isi disk atau program-program yang mengawali komputer. Secara khusus, virus tersebut tersebar dengan cara pertukaran disket.
+
+Virus Multi-Partite merupakan gabungan dari virus Parasitic dan virus Bootstrap Sector, menyerang file dan boot sector. Sedangkan virus Companion tidak dapat mengubah file. Meski begitu, virus ini membuat sebuah program baru dengan nama yang sama sebagai sebuah program yang sah, dan mengelabui sistem operasi untuk menjalankannya.
+
+Virus Link mengubah cara sistem operasi menemukan sebuah program, dan membuat agar virus dijalankan lebih dahulu, kemudian baru program yang diinginkan. Semua direktori pada komputer dapat dijangkiti oleh virus Link, dan setiap program yang dapat dieksekusi masuk ke dalam direktori dan akan memicu virus.
+
+Virus Data File menyerang program-program yang mengandung bahasa macro, yaitu bahasa pemrograman yang memungkinkan pengguna membuat fitur dan utilitas baru, untuk dapat membuka, memanipulasi, dan menutup file data. Virus-virus ini secara otomatis tereksekusi ketika program dibuka. 
+
+Sudah pasti program Get Secure and Stay Secure akan terus berlomba dengan kemampuan para hacker menciptakan virus. Perang antara pembuat virus dengan antivirusnya tampaknya memang takkan pernah usai. Sebagai pengguna, mau tak mau kita memang akan berpihak kepada para produsen antivirus, daripada data yang sudah bertahun-tahun dikumpulkan tiba-tiba menguap tak tentu rimbanya.   
+

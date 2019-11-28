@@ -1,0 +1,46 @@
+LAPORAN IPTEK Terapi Gen, untuk Kualitas Hidup Manusia
+
+SETELAH era mikrobiologi dan sintesa zat aktif untuk pengobatan penyakit, kini giliran pengembangan biologi molekuler untuk mendapatkan terapi bagi penyakit-penyakit yang belum bisa diatasi dengan antibiotik, obat-obatan berbahan sintesa kimia maupun hasil pemurnian bahan alami.
+
+Para ahli di pelbagai pusat penelitian kini giat mengembangkan sel tunas, transplantasi organ binatang serta terapi gen. Salah satu peneliti yang mengembangkan terapi gen adalah Prof dr Swan N Thung, pakar patologi, terapi gen dan kedokteran molekuler dari Mount Sinai School of Medicine, New York.
+
+Lulusan Fakultas Kedokteran Universitas Indonesia yang telah 25 tahun mengajar di Sekolah Kedokteran Mount Sinai serta bekerja di Rumah Sakit Mount Sinai itu merupakan salah satu ahli yang akan berbicara dalam seminar nasional "Peningkatan Aplikasi Biologi Molekular dalam Ilmu Kedokteran" yang diselenggarakan Fakultas Kedokteran Universitas Atma Jaya, Sabtu (27/4).
+
+Kemajuan penelitian terapi gen yang dimulai 40 tahun lalu memang tergolong lambat. Menurut Thung, meski transfer gen dilakukan pada manusia tahun 1988, saat ini sebagian besar penelitian masih pada uji klinik fase I.
+
+"Masalahnya, pengetahuan mengenai komponen genetik dari penyakit misalnya alzheimer, parkinson, diabetes, asma, arthritis rematik masih terbatas. Hal lain adalah kompleksitas pengembangan zat biologi aktif serta persyaratan uji yang ketat dan memerlukan waktu panjang untuk memastikan keamanan sebelum diterapkan di pelayanan kesehatan," paparnya.
+
+TERAPI gen pada prinsipnya adalah menyisipkan materi genetik ke dalam sel tubuh untuk mengganti atau memperbaiki gen yang rusak dalam rangka pengobatan penyakit.
+
+Materi genetik atau gen yang berupa kumpulan asam amino disintesa di laboratorium. Untuk memasukkan gen ke tubuh digunakan pelbagai bahan pembawa (vektor). 
+
+Bahan itu antara lain protein yang sesuai dengan sel organ yang dituju. Materi genetik ditempelkan ke protein kemudian dimasukkan tubuh lewat mulut, injeksi maupun inhalasi (dihirup). Dalam tubuh protein akan menempel ke reseptor sel organ sehingga DNA bisa masuk ke dalam sel. Cara inhalasi digunakan untuk mengatasi cystic fibrosis, suatu kelainan di paru yang diturunkan. 
+
+Zat pembawa lain adalah liposom. Tapi yang paling populer adalah virus karena dianggap paling efektif. Jenis yang digunakan antara lain adeno associated virus (AAV), gutless adenovirus (selubung adenovirus), lentivirus, retrovirus, herpes virus. Sebagaimana untuk imunisasi, kemampuan bereplikasi virus dihilangkan untuk mencegah infeksi.
+
+Retrovirus yang asalnya adalah HIV digunakan untuk membawa gen ke sel yang cepat bermitosis (membelah), misalnya sel tunas. Sedang adenovirus lebih sesuai untuk sel-sel yang lambat membelah. Kelemahan adenovirus adalah memicu tubuh membentuk antibodi. 
+
+"Untuk mengakalinya kini yang digunakan hanya selubung virus (gutless virus)," tutur Thung. 
+
+Adenovirus maupun selubungnya digunakan antara lain untuk memasukkan gen faktor VIII (faktor pembekuan) ke dalam sel hati dalam upaya mengatasi hemofilia, suatu penyakit gangguan pembekuan darah yang diturunkan. 
+
+Penelitian pada binatang percobaan menunjukkan hasil memuaskan. Uji klinik fase I pada manusia untuk melihat keamanannya sudah selesai. Kini menginjak fase II untuk menguji efikasinya.      
+
+Virus herpes digunakan sebagai vektor untuk gen yang hendak disisipkan ke sel saraf, misalnya untuk pengobatan Alzheimer.
+
+Selain mengganti gen yang rusak agar bisa memproduksi protein yang dibutuhkan tubuh, terapi gen digunakan untuk membasmi sel kanker. Saat ini sedang diteliti terapi gen untuk kanker payudara, kanker prostat, kanker otak dan kanker kulit. Gen yang disisipkan selain mematikan sel kanker juga berfungsi mengaktifkan sistem kekebalan tubuh sehingga tidak ada lagi sel-sel yang tumbuh tak terkendali. Uji klinik terapi gen kanker prostat kini pada fase II.
+
+Penyakit lain yang diteliti adalah thalasemia, diabetes, kardiovaskular, infeksi misalnya HIV dan hepatitis C. Pada infeksi HIV, sel tunas dari pengidap HIV diambil kemudian disisipi gen yang resisten terhadap HIV. Sel-sel tunas kemudian dikembalikan ke tubuh pasien. Di sumsum tulang sel-sel tunas itu memproduksi sel yang resisten terhadap HIV untuk menggantikan sel-sel yang terinfeksi. Prinsip serupa dilakukan untuk mengatasi hepatitis C.
+
+Penelitian yang dikerjakan Thung saat ini adalah terapi gen untuk mengatasi diabetes, yaitu memasukkan gen produsen insulin ke sel hati.
+
+BAGAIMANA masa depan terapi gen dan bilamana bisa dimanfaatkan masyarakat? Thung optimis dalam lima sampai enam tahun mendatang terapi gen bisa diterapkan di pelayanan kesehatan. Selain kanker prostat dan hemofilia, saat ini terapi gen untuk kardiovaskular untuk membentuk pembuluh darah baru menggantikan pembuluh darah yang tersumbat di sekitar jantung sudah mencapai fase II. 
+
+Tak lama lagi penelitian memasuki fase III di mana terapi dicobakan pada lebih banyak pasien. Jika berhasil, boleh dibilang tinggal selangkah untuk disetujui badan pengawasan obat dan makanan seperti Food And Drug Administration (FDA) di Amerika Serikat. Setelah mendapat izin edar atau restu untuk diterapkan, tinggal dilakukan fase terakhir, fase IV yang merupakan fase pengembangan untuk melihat aspek keamanan dan efek samping di masyarakat luas.
+
+Menurut Prof dr Suwandhi Widjaja PhD, Direktur Laboratorium Penelitian Virus Hepatitis, Fakultas Kedokteran Universitas Atma Jaya, terapi gen akan banyak meningkatkan kualitas hidup manusia namun tidak akan menyelesaikan semua masalah kesehatan. 
+
+"Sama halnya dengan penemuan antibiotika yang waktu itu diharapkan dapat menyelesaikan masalah infeksi. Ternyata sampai kini banyak penyakit infeksi belum bisa disembuhkan, bahkan banyak kuman yang resisten. Demikian juga di masa depan saat terapi gen diterapkan, mungkin ada masalah baru yang timbul," ujar Suwandhi.      
+
+Namun, setidaknya, terapi gen memberi harapan untuk penyembuhan penyakit-penyakit yang kini belum bisa diobati dengan baik.
+

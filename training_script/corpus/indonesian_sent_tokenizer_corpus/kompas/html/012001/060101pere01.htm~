@@ -1,0 +1,214 @@
+HTTP/1.1 200 OK
+Server: Microsoft-IIS/5.0
+Date: Mon, 04 Mar 2002 13:30:04 GMT
+Content-Type: text/html
+Accept-Ranges: bytes
+Last-Modified: Fri, 15 Feb 2002 10:44:24 GMT
+ETag: "785beebbdb6c11:8fe"
+Content-Length: 16781
+
+<html>
+<head>
+<title>Perempuan Cangkinganyang Tak Bisa "Dibawa-bawa" -- Sabtu, 6 Januari 2001
+</title>
+</head>
+<SCRIPT LANGUAGE="JavaScript">
+          <!--
+            function loadMenu(str) {
+           	if (str !="") {
+            location.href = str;
+			}
+          }
+			function loadRubrik(str) {
+            if (str !="") {
+            location.href = str;
+			}
+          }
+		    function loadMenu2(str) {
+            if (str !="") {
+            location.href = str;
+			}
+          }
+		    function loadRubrik2(str) {
+           	if (str !="") {
+            location.href = str;
+			}
+          }
+          // -->
+          </SCRIPT>	
+<body BACKGROUND="../../../images-2/bground.gif" marginheight="0" marginwidth="0" topmargin="0" leftmargin="0" link="#FF0031" vlink="#0063FF">
+<style type="text/css"><!--A {text-decoration: none}--></style>
+<center>
+<table BORDER=0 CELLSPACING="0" CELLPADDING="0"><tr>
+	<td valign=top width=610 colspan=6><A HREF="http://www.kompas.com/newsmail/"><IMG SRC="../../../images-2/iklan/newsmail.gif" WIDTH="468" HEIGHT="60" BORDER="0" ALT="News by Email"></A><IMG SRC="../../../images-2/garis_bwh.gif" WIDTH=2 HEIGHT=60 BORDER=0><A HREF="http://www.kompas.com/adinfo/ad_info.htm"><IMG SRC="../../../images-2/info_ad.gif" WIDTH=18 HEIGHT=60 BORDER=0></A><IMG SRC="../../../images-2/garis_bwh.gif" WIDTH=2 HEIGHT=60 BORDER=0><A HREF="http://www.kompas.com/webstore/"><IMG SRC="../../../images-2/iklan/120webstore.gif" WIDTH="120" HEIGHT="60" BORDER="0" ALT="webstore"></A><br Clear=All>
+<img SRC="../../../images-2/garis.gif" WIDTH=610 HEIGHT=2 BORDER=0>
+</td>
+</tr>
+<tr>
+	<td valign=bottom width=610 colspan=6>
+	<form>
+	<table border=0 align=left>
+	<tr>
+		<td colspan=3></td>
+	</tr>
+	<tr>
+		<td>
+		<select name="script" size=1>
+		<option selected> -  Kompas Hari Ini -
+<option>-------------
+<option value="../../../index.htm">Berita Hari Ini
+<option value="../../../sebelum.htm">Berita Sebelumnya
+<option value="/kcm/search.htm">Mencari Berita
+
+<option>-------------
+<option value="../../../redaksi.htm">Tentang Kompas
+<option value="../../../kontak.htm">Kontak redaksi
+<option>-------------
+<option value="../../../index.htm">Kompas CyberMedia
+	</select>
+		<input type="button" value="Go" onClick="loadMenu(this.form.script.options[this.form.script.selectedIndex].value)"></td>
+		<td width=10></td>
+		<td>
+		<select name="script2" size=1>
+
+<option selected> - R U B R I K -
+<option>-------------<option value="../UTAMA/index.htm">Berita Utama                    <option value="../NASIONAL/index.htm">Nasional                     <option value="../DAERAH/index.htm">Nusantara                      <option value="../DIKBUD/index.htm">Dikbud                         <option value="../EKONOMI/index.htm">Ekonomi                       <option value="../IPTEK/index.htm">Iptek                           <option value="../KURS/index.htm">Kurs Mata Uang                   <option value="../LN/index.htm">Internasional                      <option value="../METRO/index.htm">Metropolitan                    <option value="../NAPER/index.htm">Naper                           <option value="../OR/index.htm">Olahraga                           <option value="../OPINI/index.htm">Opini                           <option value="../JATIM/index.htm">Jawa Timur                      		</select>
+		<input type="button" value="Go" onClick="loadRubrik(this.form.script2.options[this.form.script2.selectedIndex].value)"></td>
+	</tr>
+	</table>
+	<table BORDER=0 CELLSPACING="0" CELLPADDING="0" align=right>
+	<tr>
+		<td><a HREF="../../../index.htm"><img SRC="../../../images-2/kompas.gif" WIDTH="121" HEIGHT="32" BORDER="0" ALT="KOMPAS Online"></a></td>
+	</tr>
+	</table></form>
+	</td>
+</tr>
+<tr>
+	<td valign=top width=610 colspan=6><img SRC="../../../images-2/garis.gif" WIDTH="610" HEIGHT="2" BORDER="0"></td>
+</tr>
+<tr>
+	<td rowspan=5 valign=top width=5 bgcolor="#e7e7e7">&nbsp;</td>
+	<th rowspan=5 valign=top width=130 bgcolor="#e7e7e7">
+<a HREF="../../../../index.htm"><IMG SRC="../../../images-2/kcm_1.gif" WIDTH=115 HEIGHT=39 BORDER=0 halign=center valign=center vspace=11></a><BR Clear=All><A HREF="/kcm/edisi.htm"><IMG SRC="../../../images-2/iklan/edisikhusus.gif" BORDER=0 vspace=5 ALT="Edisi Khusus KOMPAS Akhir Tahun 2000"></a><BR Clear=All><A HREF="http://www.kompas.com/iklan/mini/iklbaris.htm"><IMG SRC="../../../images-2/iklan/iklbaris.gif" BORDER=0 vspace=5 ALT="Iklan Baris"></a><BR Clear=All></th>
+	<td rowspan=3 valign=top width=1 bgcolor="#3d3d3d"><IMG SRC="../../../images-2/dot.gif" WIDTH="1" HEIGHT="1" BORDER="0"></td>
+	<td rowspan=3 valign=top width=1 bgcolor="#878787"><IMG SRC="../../../images-2/dot.gif" WIDTH="1" HEIGHT="1" BORDER="0"></td>
+	<td colspan=3 align=right width=468 bgcolor="#e7e7e7">
+	<table BORDER=0 CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+	<tr>
+		<td width=3></td>
+		<td><IMG SRC="../../../images-2/point.gif" WIDTH="5" HEIGHT="5" BORDER="0"> <font face="arial" SIZE=1 Color="#FF0031"><a HREF="../ENGLISH/index.htm"><B>English </B> </a></font></td>
+		<td width=3></td>
+		<td><IMG SRC="../../../images-2/point.gif" WIDTH="5" HEIGHT="5" BORDER="0"> <font face="arial" SIZE=1 Color="#FF0031"><a HREF="../BELANDA/index.htm"><B>Nederlands </B> </a></font></td>
+		<td align=right width=225><IMG SRC="../../../images-2/judul/utama.gif" WIDTH="131" HEIGHT="22" HSPACE="0" VSPACE="0" BORDER="0"></td>
+	</tr></table>
+	</td>
+</tr>
+<tr>
+	<td colspan=2 valign=top align=left width=468><IMG SRC="../../../images-2/garis.gif" WIDTH="473" HEIGHT="2" BORDER="0"></td>
+</tr>
+<tr>
+	<td valign=top width=8><IMG SRC="../../../images-2/dot_1.gif" WIDTH="8" HEIGHT="1" BORDER="0"></td>
+	<td valign=top align=left width=458>
+	<table BORDER=0 CELLSPACING="0" CELLPADDING="0">
+	<tr>
+		<td height=8 colspan=2></td>
+	</tr>
+	<tr>
+		<td width=35></td>
+		<td width=400><font face="arial" SIZE=2 Color="#FF0000">>Sabtu, 6 Januari  2001<br><br></font>
+		<font face="arial" SIZE=2 Color="#000000"><font face="arial" SIZE=4 Color="#0063FF"><B>
+<i>Perempuan Cangkingan yang Tak Bisa "Dibawa-bawa"</i>
+</B></font><br><br>NAMANYA Ati (25). Meski lahir dan tumbuh di daerah pesisir, kulit wanita semampai ini kuning langsat-lebih banyak menyerupai gadis-gadis pegunungan di tanah Pasundan. Sebagai pekerja tempat hiburan malam di wilayah Desa Cangkingan, Kecamatan Karangampel, Indramayu, kerjanya tak kalah cekatan dengan para pekerja di tempat hiburan di kota-kota besar.<p>
+Dengan bujuk rayunya yang manis, dia menyodorkan para <I>bar girl</I> sebagai kawan berbincang dan berjoget. Selanjutnya dia menawarkan minuman, dan tanpa disadari, ratusan ribu rupiah dari kocek tamu pun berpindah ke kantung kasir tempat dia bekerja.<p>
+Desa Cangkingan sudah lama dikenal sebagai kawasan tempat hiburan terluas dan relatif bersih di kawasan pantai utara (pantura). Jumlah tempat hiburan di sini hampir mencapai angka 100. Suasananya hampir mirip dengan banyak desa di pinggiran Kota Manila, Filipina.<p>
+Istimewanya, tidak seperti di Jakarta, di kawasan ini hampir tak pernah terjadi keributan atau <I>grebegan</I> aparat keamanan. Warga desa pun seolah permisif terhadap hiruk-pikuk tempat hiburan yang berlangsung sampai larut malam di tengah permukiman penduduk desa. Namun, jangan harap bisa "membawa" para perempuan yang bekerja di tempat ini. Banyak petinggi di pantura memilih tempat ini sebagai tempat beristirahat sejenak atau tempat "menjamu" relasinya.<p>
+Beberapa wanita yang bekerja mengakui, Cangkingan menjadi <I>training centre</I>-nya para wanita pekerja tempat hiburan yang ingin memperbaiki nasibnya di tempat-tempat hiburan di kota-kota besar, terutama di Jakarta. Tetapi, ya, itu tadi, jangan berpikir macam-macam bisa membawa perempuan Cangkingan dari tempat pusat pelatihannya itu. <p>
+Tempat hiburan di Cangkingan mulai berkembang pesat setelah "ekspor" tenaga kerja wanita dari Indramayu merosot di tengah krisis ekonomi tahun 1997 yang membuat nasib petani makin terpuruk. Banyak perempuan dari keluarga petani yang kemudian bekerja sebagai wanita bar di tengah tingginya angka perceraian.<p>
+Bupati Indramayu Irianto Mahfudz Sidik, yang punya panggilan akrab Yance, mengakui, nasib petani Indramayu jauh lebih buruk daripada nasib para petani tambak. Padahal, 32 persen produksi beras nasional berasal dari 118.000 hektar sawah di Indramayu.<p>
+Setelah petani bekerja keras selama tiga bulan di sawah, harga satu kilogram beras cuma Rp 1.000. Bandingkan dengan hasil jerih payah para petani udang setelah kerja 40 hari... Rp 40.000 untuk setiap satu kilogram udang galah yang dihasilkan. Sampai sekarang, 60 persen produk perikanan yang dikonsumsi masyarakat Jawa Barat dan Jakarta berasal dari Indramayu.<p>
+Itu sebabnya, Yance, yang baru setengah bulan menjadi bupati, berniat mengubah sebagian besar sawah menjadi tambak. "Saya sudah berulang kali menegaskan kepada pemerintah pusat, kami akan mengubah sawah menjadi tambak bila pemerintah pusat enggan membantu memperbaiki nasib petani di sini," katanya di sela silaturahmi Idul Fitri, Rabu pekan lalu.<p>
+<B>
+<CENTER>
+<h3>***</h3>
+</CENTER>
+</B>
+<p>
+SUDAH sejak lama Kabupaten Indramayu dikenal sebagai salah satu kabupaten paling kaya di Jawa Barat, terutama di kawasan pantura. Ironisnya, tingkat kemiskinan penduduk di Indra-mayu tak pernah turun. Seperti masyarakat di kawasan pesisir mana pun, masyarakat Indramayu dikenal sangat dinamis, terbuka, adaptif, dan pragmatis. <p>
+""Yang paling menonjol adalah sikap mereka yang temperamental, tetapi sangat demokratis dan suka bergotong-royong,"" jelas Kepala Polisi Resor (Polres) Indramayu Ajun Komisaris Besar (Pol) Setyo Wasisto, 30 Desember lalu.<p>
+Tak heran bila di kawasan ini selain angka perceraiannya tinggi terutama akhir tahun 1970-an yang sebulan bisa mencapai 600 pasangan cerai-juga sering terjadi tawuran massal antardesa. Pernah pada satu saat, kaum perempuan di salah satu desa menunjukkan kemuakan mereka terhadap tawuran yang telah menewaskan ratusan orang.<p>
+Itu terjadi akhir tahun 1999. Para perempuan dari Desa Mekargading, Kecamatan Sliyeg, nekat. Mereka menghadang serangan pemuda Desa Tugu di mulut jalan desa. Ketika jarak dengan penyerang cukup dekat, terdengar aba-aba, ""Buka...!"" Para perempuan secara serempak membuka lilitan kain mereka dan... urunglah tawuran massal.<p>
+Perempuan Indramayu, seperti diekspresikan penari topeng terkenal Rasinah (70), dikenal sebagai perempuan yang mandiri, pemberani, dan cenderung nekat seperti ditunjukkan kaum perempuan Vietnam. Perempuan Cangkingan memiliki sejumlah karakter yang disebutkan itu. <p>
+Di balik tubuh mereka, tersimpan api ""para pelaut"". Dulu, tidak seperti kebanyakan perempuan Cirebon yang membatik ketika tidak ada <a href="http://www.kompas.com/iklan/lowongan/"><u>pekerjaan</u> </a> di sawah, para perempuan Indramayu membatik (produknya dikenal sebagai batik Paoman) saat menunggu suami pulang dari laut.<p>
+Ekspresi karakter keras warga Indramayu mungkin juga bisa ditunjukkan dengan suburnya industri petasan di Kecamatan Lohbener yang hingga kini menjadi pemasok utama petasan di Jakarta dan sekitarnya. Industri petasan berkembang lewat tradisi pernikahan, khitanan, dan hari raya keagamaan. <p>
+"Karena punya akar tradisi yang kuat, lebih-lebih mendapat dukungan dana dari para penanam modal di Jakarta, industri rumahan ini sulit dihapus. Barangkali sebagai masukan, akan lebih bijak bila secara bersama-sama pemerintah, aparat keamanan, dan para pemuka masyarakat melakukan langkah penertiban, bukan penghapusan," ujar Wasito, tokoh setempat.<p>
+Itulah kekayaan dan ingar-bingar Indramayu. Seandainya seluruh komponen masyarakat di Indramayu mampu mengolah seluruh kekuatan yang mereka miliki, apalagi menyongsong era otonomi daerah, bukan hal yang mustahil bila satu saat, daerah ini tumbuh menjadi kawasan paling andal di kawasan Jawa Barat, sekurangnya di kawasan pantura. <B>(Windoro Adi)</B> <hr><font face="arial" SIZE=2 Color="black"><b>Berita utama      lainnya :</b><br><ul><li><a href="/kompas-cetak/0101/06/utama/poli01.htm"><font color="#0000ff">Polisi Indikasikan  19 Nama Tersangka Lain</font></a><br><li><a href="/kompas-cetak/0101/06/utama/dpr01.htm"><font color="#0000ff">DPR Tak Bisa Terima Penolakan Megawati</font></a><br><li><a href="/kompas-cetak/0101/06/utama/dire01.htm"><font color="#0000ff">3 Direktur PT Ajinomoto Ditangkap</font></a><br><li><a href="/kompas-cetak/0101/06/utama/the01.htm"><font color="#0000ff">The Fed Turunkan Lagi  Suku Bunga Diskonto</font></a><br><li><a href="/kompas-cetak/0101/06/utama/pere01.htm"><font color="#0000ff">Perempuan Cangkinganyang Tak Bisa "Dibawa-bawa"</font></a><br><li><a href="/kompas-cetak/0101/06/utama/mobi07.htm"><font color="#0000ff">10 Mobil Caltex Disandera Pam Swakarsa</font></a><br><li><a href="/kompas-cetak/0101/06/utama/pol01.htm"><font color="#0000ff">Politik Uang Warnai Pemilu di Thailand</font></a><br><li><a href="/kompas-cetak/0101/06/utama/lapo01.htm"><font color="#0000ff">LAPORAN IPTEK</font></a><br><li><a href="/kompas-cetak/0101/06/utama/dana07.htm"><font color="#0000ff">DANA KEMANUSIAAN "KOMPAS"</font></a><br><li><a href="/kompas-cetak/0101/06/utama/baca01.htm"><font color="#0000ff">BACA KOMPAS BESOK</font></a><br></ul><br></font></font>
+<p><br>
+		</td>
+	</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td colspan=3 valign=bottom width=10><IMG SRC="../../../images-2/garis_1.gif" WIDTH="10" HEIGHT="11" BORDER="0"></td>
+	<td valign=bottom width=460><img SRC="../../../images-2/garis.gif" WIDTH="465" HEIGHT="2" BORDER="0"></td>
+</tr>
+<tr>
+	<td colspan=4 valign=top width=468 bgcolor="#e7e7e7"><center>
+<A HREF="http://www.kompas.com/"><IMG SRC="../../../images-2/iklan/updates.jpg" WIDTH="468" HEIGHT="60" BORDER="0" VSPACE=5  ALT="Get The Latest News at Kompas Cyber Media"></A></center></td>
+</tr>
+<tr>
+	<td colspan=6 valign=top width=610><img SRC="../../../images-2/garis.gif" WIDTH="610" HEIGHT="2" BORDER="0"></td>
+</tr>
+<tr>
+	<td colspan=6 valign=top width=610>
+	<table border=0 align=left>
+	<tr>
+		<td colspan=3></td>
+	</tr>
+	<tr>
+		<td><form>
+		<select name="scriptb" size=1>
+		<option selected> -  Kompas Hari Ini -
+<option>-------------
+<option value="../../../index.htm">Berita Hari Ini
+<option value="../../../sebelum.htm">Berita Sebelumnya
+<option value="../../../search.htm">Mencari Berita
+<option>-------------
+<option value="../../../redaksi.htm">Tentang Kompas
+<option value="../../../kontak.htm">Kontak redaksi
+<option>-------------
+<option value="../../../../index.htm">Kompas CyberMedia
+		</select>
+		<input type="button" value="Go" onClick="loadMenu2(this.form.scriptb.options[this.form.scriptb.selectedIndex].value)"></td>
+		<td width=10></td>
+		<td>
+		<select name="script2b" size=1>
+<option selected> - R U B R I K -
+<option>-------------
+<option value="../UTAMA/index.htm">Berita Utama                    <option value="../NASIONAL/index.htm">Nasional                     <option value="../DAERAH/index.htm">Nusantara                      <option value="../DIKBUD/index.htm">Dikbud                         <option value="../EKONOMI/index.htm">Ekonomi                       <option value="../IPTEK/index.htm">Iptek                           <option value="../KURS/index.htm">Kurs Mata Uang                   <option value="../LN/index.htm">Internasional                      <option value="../METRO/index.htm">Metropolitan                    <option value="../NAPER/index.htm">Naper                           <option value="../OR/index.htm">Olahraga                           <option value="../OPINI/index.htm">Opini                           <option value="../JATIM/index.htm">Jawa Timur                      		</select>
+		<input type="button" value="Go" onClick="loadRubrik2(this.form.script2b.options[this.form.script2b.selectedIndex].value)"></td>
+	</tr>
+	</table>
+	<table BORDER=0 CELLSPACING="0" CELLPADDING="0" align=right>
+	<tr>
+		<td><a HREF="../../../index.htm"><img SRC="../../../images-2/kompas.gif" WIDTH="121" HEIGHT="32" BORDER="0" ALT="KOMPAS Online"></a></td>
+	</tr>
+	</table>
+	</td>
+</tr>
+<tr>
+	<td colspan=6 valign=top width=610><img SRC="../../../images-2/garis.gif" WIDTH="610" HEIGHT="2" BORDER="0"></td>
+</tr>
+<tr>
+	<td colspan=6 valign=bottom width=610 height=10>
+	<TABLE BORDER=0 CELLSPACING=0 CELLPADDING=0>
+	<TR>
+		<TD><font face="arial" SIZE=1 Color="#000000">&copy; C o p y r i g h t &nbsp; 1 9 9 8 &nbsp; Harian <font face="arial" SIZE=2 Color="#000000"><strong><em>Kompas</em></strong></font></font></TD><TD WIDTH="30"></TD><TD><FONT SIZE=1 FACE=ARIAL><FONT SIZE=2 COLOR=FF0000><B></B></FONT></A></FONT></TD>
+	</TR>
+	</TABLE></td>
+</tr>
+</table>
+</form>
+</center>
+</body>
+</html>

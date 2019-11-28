@@ -1,0 +1,44 @@
+Melacak Kapal Asing di Wilayah ZEE  LAPORAN IPTEK
+
+PENCURIAN ikan yang dilakukan oleh kapal-kapal nelayan asing di wilayah Zona Ekonomi Eksklusif (ZEE) mengakibatkan Indonesia mengalami kerugian sampai 4 milyar dollar AS per tahun. Bukan itu saja, masuknya nelayan asing ke perairan Indonesia juga telah mengakibatkan hasil tangkapan dan penghasilan nelayan Indonesia berkurang.   
+
+Selain nelayan asing, Indonesia pun masih harus menghadapi penyelundupan, termasuk penyelundupan bahan bakar minyak (BBM) dan kayu yang berlangsung di dalam wilayah ZEE. 
+
+Mengamankan wilayah ZEE yang berjarak 200 mil laut (sekitar 370,6 kilometer) dari garis pantai bukanlah hal yang mudah. Sebab itu, berita hadirnya nelayan asing di perairan Indonesia dan berlangsungnya penyelundupan di tengah laut seolah-olah menjadi hal yang rutin di media massa.     
+
+Sesungguhnya di Skadron 5 Pangkalan Udara (Lanud) Hasanuddin Makassar terdapat tiga pesawat patroli laut Boeing 737 milik Angkatan Udara, yang bertugas melakukan pengamatan udara dan laut (air and maritime surveillance). "Tugas kami hanya mendeteksi. Hasil deteksi disampaikan kepada komando atas yang akan menentukan tindakan selanjutnya. Bila perlu, hasil deteksi itu dikoordinasikan dengan Angkatan Laut, Angkatan Darat, Kepolisian, atau dengan instansi terkait," ungkap Kapten (Pnb) Sumanto, Komandan Operasi Penerbangan Skadron 5.   
+
+Dengan dilengkapi SLAMMR (Side Looking Airborne Multi Mission Radar), Boeing 737 mampu mengawasi wilayah perairan seluas 136.791 kilometer persegi per jam. 
+
+Namun, penggunaan pesawat patroli udara hanya menghasilkan pengamatan sesaat (snapshot). Sebab itu, untuk melakukan pengawasan terhadap sasaran-sasaran di wilayah perairan yang sangat luas secara terus-menerus, diperlukan satu armada pesawat yang menerbangi wilayah perairan yang sangat luas itu selama 24 jam tanpa henti.  
+
+Hal yang sama juga berlaku bagi kapal patroli laut. Diperlukan suatu armada kapal patroli yang sangat besar untuk mengawasi wilayah perairan Indonesia seluas 7,9 juta kilometer persegi, termasuk ZEE. 
+
+PENGAWASAN wilayah laut yang efektif saat ini dirasakan sangat perlu. Akan tetapi, menggunakan pesawat udara dan kapal laut dalam mengawasi wilayah laut Indonesia dewasa ini dianggap tidak fisibel. Selain berarti penanaman modal yang sangat besar, itu juga memerlukan komitmen yang sangat kuat untuk menanggung biaya pengoperasian dan pemeliharaan semua peralatan tersebut yang sangat tinggi. Risiko yang mungkin dihadapi personel-personel yang melakukan operasi secara intensif itu juga harus diperhatikan, mengingat cuaca buruk menjadi salah satu faktor penghambat. 
+
+Kapal patroli laut dan pesawat patroli udara berguna jika cakupan wilayah yang diawasi terbatas dan sasarannya tertentu saja. Misalnya untuk mengawasi sektor tertentu, SAR (search and rescue), dan mengidentifikasi atau mencegat sasaran.   
+
+Sementara, menggunakan sistem satelit bukan saja tidak dapat menjangkau cakupan yang luas, tetapi juga tidak dapat memberikan waktu yang cukup, yang diperlukan untuk mengetahui keadaan di suatu tempat yang sebenarnya.  
+
+Keadaan ini tidak hanya dihadapi oleh Indonesia, tetapi juga oleh banyak negara lain. Melihat semua keterbatasan dan hambatan yang dihadapi banyak negara itu, termasuk Kanada, sebuah perusahaan Kanada, Raytheon System Canada Ltd, mengembangkan SWR-503, Radar Permukaan Gelombang Frekuensi Tinggi (HF Surface Wave Radar).   
+
+SWR-503 yang dibangun di pantai memancarkan gelombang radio frekuensi tinggi jarak jauh yang mengikuti lekukan permukaan (kontur) Bumi dan air laut melampaui kaki langit (over the horizon).  SWR-503 bisa mendeteksi atau melacak sasaran sampai lebih dari 400 kilometer, melampaui ZEE.  
+
+Kemampuan itu menjadikannya berbeda dengan radar microwave, seperti radar ATC (air traffic control) yang bergerak mengikuti garis penglihatan mata manusia (line of sight) atau mengikuti garis lurus.  
+
+Dengan demikian, SWR-503 dapat mendeteksi dan melacak sasaran di permukaan laut dan sasaran di udara yang terbang rendah (low level airborne target), seperti pesawat terbang, kapal laut, dan gunung es, sampai jarak 500 kilometer dari garis pantai dengan cakupan (lebar) sampai 120 derajat. 
+
+Dengan melengkapi kapal-kapal atau pesawat-pesawat yang legal dengan tanda-tanda tertentu, SWR-503 dapat dengan cepat membedakan antara kapal atau pesawat yang legal dengan yang ilegal. Jadi, kapal-kapal nelayan asing atau kapal-kapal penyelundup yang beroperasi di ZEE dapat dengan mudah dideteksi atau dilacak keberadaannya. Bahkan, pesawat asing yang terbang rendah dan melakukan kegiatan mata-mata di perairan Indonesia juga dengan mudah dilacak oleh SWR-503. 
+
+Selain untuk mendeteksi sasaran di permukaan laut dan di udara, SWR-503 juga dapat berfungsi sebagai sensor jarak jauh untuk mengetahui arus permukaan laut dan arah gerakan angin. Data semacam itu penting bagi kegiatan eksplorasi minyak lepas pantai atau bagi mereka yang terlibat dalam SAR di laut. 
+
+Di Pusat Pengendali Operasi, sistem IMS (integrated maritime surveillance) menghubungkan deteksi yang diperoleh dari radar permukaan gelombang dengan identifikasi informasi dari sistem ADS (automatic dependent surveillance) dan sensor-sensor lain. Semua data itu dilebur untuk menciptakan data base dan display system untuk memberikan gambaran yang lengkap mengenai aktivitas permukaan laut dan udara di ZEE. 
+
+Dibandingkan dengan kapal patroli laut dan pesawat patroli udara, penggunaan SWR-503 sangat murah. Selain tidak memerlukan penanaman modal yang besar, SWR-503 juga tidak memerlukan komitmen yang kuat untuk membiayai pengoperasian dan pemeliharaan radar tersebut. 
+
+Dan, berbeda dengan kapal patroli laut dan pesawat patroli udara, SWR-503 tidak tergantung pada kondisi cuaca. SWR-503 dapat dioperasikan secara kontinu dalam kondisi cuaca seperti apa pun selama 24 jam sehari, 365 hari setahun. 
+
+Bahkan, dengan SWR-503, penggunaan kapal patroli laut dan pesawat patroli udara bisa lebih efektif dan efisien. Karena, kedua wahana itu baru digerakkan setelah menerima laporan mengenai adanya sasaran yang perlu ditangani lebih lanjut dari SWR-503.  
+
+Dengan demikian, jika Indonesia menggunakan SWR-503, berita bahwa kapal asing yang didatangi itu sudah menghilang saat kapal patroli Angkatan Laut tiba tidak muncul lagi di media massa.   
+

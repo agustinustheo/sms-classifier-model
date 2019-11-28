@@ -1,0 +1,36 @@
+LAPORAN IPTEK  Cara untuk Mengatasi Kelangkaan Air Tawar
+
+INDONESIA memiliki sekitar 17.000 pulau, yang sebagian besar tergolong pulau-pulau kecil. Dengan bertambahnya jumlah penduduk, dalam kondisi normal saja ketersediaan air tawar yang memadai di beberapa pulau sudah menjadi masalah, apalagi bila musim kemarau panjang. 
+
+Kondisi ini antara lain dialami penduduk di Kepulauan Seribu yang berada di Teluk Jakarta. Dengan luas wilayah hampir empat kali luas DKI Jakarta, di perairan itu terdapat sekitar 135 pulau kecil. Dari sekian banyak pulau itu, hanya 11 yang berpenghuni. Empat di antaranya memiliki kepadatan penduduk yang tinggi, yaitu di Pulau Tidung, Untung Jawa, Pramuka, dan Pulau Panggang. 
+
+Sebagian besar mata pencaharian penduduk di pulau itu selain menangkap ikan juga membudidayakan rumput laut. Namun, pengolahan rumput laut masih terbatas pada pengeringan, belum ke tahap pengolahan yang mendasar seperti perendaman, pembersihan, pencucian, pengapuran, dan perebusan, apalagi sampai pada pembuatan agar atau tepung karagian.
+
+Tahapan proses lanjutan ini tidak dilakukan karena terbatasnya sumber air bersih atau air tawar di pulau-pulau itu. Hal ini menyebabkan penghasilan mereka terbatas. Harga rumput laut kering sekitar Rp 4.000 hingga Rp 5.000 per kilogram, namun bila diolah dapat mencapai harga tiga kali lipat. 
+
+Masalah utama
+
+Di Kepulauan Seribu ketersediaan air bersih memang merupakan masalah utama. Umumnya penduduk membuat sumur dangkal yang airnya payau atau menampung air hujan. Untuk memenuhi kebutuhan air minum dan masak, penduduk membeli air dengan harga Rp 1.000 hingga Rp 1.500 per jeriken atau Rp 50 hingga Rp 75 per liter dari instalasi Osmosis Balik (Reverse Osmosis) yang ada di beberapa pulau. Sedangkan untuk keperluan mandi dan mencuci, penduduk menggunakan air payau dari sumur masyarakat.  
+
+Karena mahalnya harga membran untuk instalasi Osmosis Balik dan untuk memperpanjang masa pakai instalasi itu, pengelola instalasi tersebut menggunakan air payau dari sumur bor dalam. Namun, akibatnya ketinggian muka air sumur masyarakat menjadi berkurang karena terisap sumur bor dalam itu. 
+
+Melihat hal itu, Kepala Bidang Tekno-Ekonomi Sumber Daya Energi Badan Pengkajian dan Penerapan Teknologi (BPPT) Bambang Gambiro mengusulkan penerapan teknologi desalinasi sebagai solusinya. Fasilitas ini diharapkan dapat membantu dan memberdayakan masyarakat nelayan di pulau kecil, dengan meningkatkan usaha budidaya rumput laut dan perikanannya.
+
+Paket teknologi yang dikembangkan BPPT untuk mengubah air laut menjadi air tawar menggunakan kombinasi panas air buangan pembangkit listrik tenaga diesel yang ada di pulau-pulau kecil dan pemanas air surya yang sudah banyak tersedia dan teruji. Investasi untuk membangun instalasi berkapasitas 5 hingga 10 ton air per hari kurang dari Rp 300 juta. 
+
+Menurut Bambang, selain di pulau-pulau kecil, pembangkit listrik tenaga uap (PLTU) yang berada di pulau besar seperti di Jawa juga dapat memasok air tawar bagi penduduk di pesi-sir. Di pantura Jawa ada sekitar lima pembangkit listrik, yaitu PLTU Suralaya Merak, PLTGU Muara Karang, PLTGU Gresik, PLTGU Tambak Lorok Semarang, dan PLTGU Grati Pasuruan.
+
+Pengamatannya, PLTU sepanjang pantura memiliki instalasi desalinasi air laut, namun tidak digunakan optimal. Fasilitas itu hanya dioperasikan untuk menyediakan air tawar untuk mengisi ketel uap atau boiler pembangkit tersebut. 
+
+Destilasi
+
+Saat ini tersedia beberapa macam teknologi yang mampu memisahkan air tawar yang terkandung di dalam air laut, salah satunya adalah dengan perubahan fasa air (destilasi). Pada proses destilasi, air laut dipanaskan agar air tawar yang terkandung dalam air laut menguap, selanjutnya uap tersebut diembunkan untuk mendapatkan air tawar.
+
+Pemanfaatan pembangkit diesel untuk memenuhi kebutuhan listrik masyarakat kepulauan, menurut Didik R, Pemimpin proyek Destilasi Air Laut BPPT, merupakan peluang yang dapat digunakan sebagai sumber panas pada proses destilasi. 
+
+Selama ini panas yang ditimbulkan oleh mesin penggerak diesel saat beroperasi umumya diredusir dengan menggunakan pendingin udara atau pendingin air. Dari data yang ada, diketahui aliran panas yang diserap oleh air pendingin radiator dapat mencapai 15 persen dari total panas mesin diesel, sedangkan aliran panas yang dikeluarkan melalui cerobong asap dapat mencapai 31,5 persen. Data tersebut menggambarkan bahwa separuh energi panas yang ditimbulkan oleh pembangkit diesel yang beroperasi terbuang percuma.
+
+Panjangnya wilayah pesisir pantai serta banyaknya pulau kecil yang ada di Indonesia merupakan tantangan bagi peneliti BPPT untuk memanfaatkan teknologi yang ada guna memenuhi kebutuhan air (bersih) di wilayah tersebut. 
+
+Inti dari kegiatan penelitian yang dilakukan BPPT, lanjut dia, adalah mencoba menggabungkan sumber daya energi panas air pendingin mesin diesel, panas buang cerobong asap mesin diesel, dan energi matahari secara maksimal untuk proses destilasi air laut dengan mengambil kasus pemenuhan kebutuhan air minum di pulau Panggang, Kepulauan Seribu.  
+

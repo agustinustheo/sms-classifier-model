@@ -1,0 +1,44 @@
+LAPORAN IPTEK   Cip Mikro dan Perburuan Sasaran
+
+SEIRING dengan pemberitaan mengenai tewasnya Panglima Gerakan Aceh Merdeka (GAM) Teungku Abdullah Syafi'ie, muncul pula tuduhan dari pihak GAM bahwa dalam amplop surat undangan yang dikirimkan kepada Panglima GAM didapati microchip atau cip mikro (berukuran kecil). 
+
+Mengenai hal ini, memang lalu timbul kontroversi antara pihak GAM dan Gubernur Aceh. Laporan ini tidak bermaksud memasuki kontroversi tersebut dan selanjutnya hanya membahas tentang penggunaan karya teknologi yang selama setengah abad terakhir telah melahirkan revolusi besar yang luas dan mendalam pengaruhnya bagi kehidupan manusia. 
+
+Microchip, mikrocip, atau cip renik, berawal dari penemuan transistor oleh William Shockley, John Bardeen, dan Walter Brattain tahun 1947. Semenjak itu, dengan transistor tersebut, para insinyur bisa memperkecil barang-barang listrik. Sesuai dengan partikel yang berperan utama dalam proses ini, yakni elektron, barang-barang tersebut lalu berubah menjadi barang elektronik.  
+
+Teknologi utama yang mendukung penciptaan barang-barang ini, mulai dari komputer, audio, kamera, dan masih banyak lainnya, adalah mikro-elektronika, karena ukuran cip atau keping elektronik dari transistor tersebut makin lama makin kecil. 
+
+Dari sebutannya, mula-mula ada IC (integrated circuit), lalu LSI (Large-scale IC), lalu VLSI (Very Large-scale IC). Itu artinya, orang makin pintar memasang banyak sekali transistor dalam satu keping mikrocip seukuran kuku jari. 
+
+Dewasa ini, para insinyur Amerika bisa membuat satu mikrocip untuk CPU (central processing unit) superkomputer Cray YPM dengan ongkos produksi hanya 100 dollar AS. Mikrocip itu sendiri berisi satu milyar transistor dan bisa digunakan untuk barang mikro lain, seperti mesin mikro, robot mikro, sensor mikro, dan sebagainya. 
+
+Revolusi mikro-elektronika ini hingga kini masih terus berlangsung dan orang pun merasakan manfaatnya. Hal itu secara fenomenal dapat dilihat pada komputer dan produk-produk elektronik, yang dari waktu ke waktu mengalami perkembangan dramatis dengan dukungan miniaturisasi komponen elektronika ini.  
+
+Dengan semakin majunya mikrocip seperti yang dipasang pada prosesor komputer, maka komputer-komputer mutakhir memiliki tiga ciri, yakni ukuran semakin kecil dan ringan, membutuhkan daya listrik lebih kecil, namun kemampuan kerjanya meningkat (karena dengan kecilnya ukuran komponen, maka dalam ruangan berukuran sama, dapat dipasang lebih banyak lagi prosesor). 
+
+MIKROCIP lalu menjadi blok dasar bagi berbagai peralatan elektronik. Salah satunya adalah untuk transmiter atau pemancar. Untuk mengetahui keberadaan orang atau barang ada di mana, hal itu memang bisa dilakukan dengan memasang transmiter mungil ini pada benda itu. Kini penggunaan transmiter ini semakin efektif karena dikombinasi dengan GPS (global positioning system).      
+
+Kalau mobil dilengkapi penerima GPS, maka pengemudinya bisa memantau rute yang akan dilalui karena ada jaringan satelit GPS yang memantau jaringan rute tersebut. 
+
+Nah, kalau pada mobil tersebut juga terdapat transmiter-semacam LoJack-maka sinyal yang akan datang dari alat ini bisa digunakan oleh polisi seandainya mobil tersebut dilaporkan dicuri. 
+
+Penggunaan cip lainnya bisa beragam. Hewan piaraan kini juga bisa ditempeli mikrocip, yakni disuntikkan di bawah kulitnya. Kalau hewan ini hilang, ia bisa dilacak dan ditemukan. Hewan-hewan di alam liar-di hutan atau di laut-juga sering dipasangi cip untuk memantau daya jelajah dan perilakunya. 
+
+Berikutnya, dengan seizin Komisi Komunikasi Federal AS, semua telepon seluler yang dijual tahun sekarang ini harus punya kemampuan mengidentifikasi lokasi dirinya untuk keperluan darurat. Telepon ini akan ditempeli dengan prosesor mikrocip atau sistem berbasis Internet yang bergantung pada teknologi GPS untuk menetapkan lokasi.  
+
+Sinyal-sinyal akan diterima langsung dari cip yang dipasang atau melalui jaringan Web (Internet). Setahun kemudian, teknologi serupa juga akan bisa didapati pada jam tangan dan kalung yang akan dikenakan oleh anak-anak dan pasien penderita Alzheimer. 
+
+Muncul pertanyaan, dari mana asal tenaga mikrocip tersebut agar ia bisa memancarkan informasi tentang lokasi transmiter (artinya juga orang, mobil, atau hewan piaraan)? Tentunya juga dari baterai kecil.  
+
+Dalam hal mikrocip bukan dikirim secara rahasia dalam amplop (seperti dituduhkan pihak GAM) untuk mencapai tujuan akhir mengetahui keberadaan seseorang, baterai mikrocip-misalnya untuk pasien rawat jalan-dapat diisi kembali secara induktif, yakni dengan mendekatkan pergelangan tangan ke mesin pengisi (charger). 
+
+KENYATAANNYA, penggunaan mikrocip untuk berbagai tujuan kini sudah semakin umum, termasuk mikrocip yang dipasang pada transmiter.  
+
+Selain penggunaan yang telah disebut di atas, di negara maju petugas penegak hukum sering meminta orang-orang tertentu mengenakan kalung elektronik untuk memantau aktivitas mereka.  
+
+Pabrik-pabrik pembuat mikrocip, seperti Digital Angel, kini terus menyempurnakan produknya sehingga penggunaannya-baik untuk melacak (tracking), menemukan kembali (recovery), maupun identifikasi-bisa semakin meluas. Sebelum ini, hambatan penggunaan produk mikrocip jenis ini terkendala oleh ukuran yang masih terlalu besar, keharusan pemeliharaan yang masih merepotkan, sumber tenaga yang kurang memadai, atau aktivasi yang tidak mudah. 
+
+Dengan dukungan dan penyempurnaan teknologi di atas, pemanfaatan mikrocip di masa yang akan datang memang akan makin meluas, baik untuk keperluan sipil (memantau pasien, mencari anak atau hewan peliharaan yang hilang, juga barang seni atau barang berharga lainnya), penegakan hukum (memantau orang yang dikenai tahanan rumah, saksi yang dalam perlindungan), dan-bila diperlukan memang untuk mengetahui keberadaan seseorang melalui perantara.  
+
+Jadi, lepas dari kontroversi sekitar serangan terhadap GAM, teknologi mikrocip sendiri memang sebetulnya kini telah menjadi barang sehari-hari, dengan manfaatnya yang hebat itu.   
+
