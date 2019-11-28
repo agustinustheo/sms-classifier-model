@@ -1,21 +1,9 @@
-import os
 import re
-import sys
 import nltk
-import random
 import pickle
-import numpy as np
 import pandas as pd
-from sklearn.svm import SVC
-from sklearn.naive_bayes import MultinomialNB
+from nltk.tokenize import word_tokenize
 from sklearn.preprocessing import LabelEncoder
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from nltk.classify.scikitlearn import SklearnClassifier
-from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
-from sklearn.linear_model import LogisticRegression, SGDClassifier
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 
 # Indonesian SMS Preprocessing
 def convert_tacky_text(text):
@@ -197,141 +185,73 @@ def find_features(message):
 
     return features
 
-# Train the sentence tokenizer
-f=open("corpus/indonesian_sent_tokenizer_corpus/indonesian-promotion-text.txt", "r")
-if f.mode == 'r':
-    train_text = preproccess_text(f.read())
-f.close()
-
-path = 'corpus/indonesian_sent_tokenizer_corpus/kompas/txt'
-for foldername in os.listdir(path):
-    new_path = path + '/' + foldername
-    for filename in os.listdir(new_path):
-        f=open(new_path + '/' + filename, "r")
-        if f.mode == 'r':
-            train_text = train_text + ' ' + preproccess_text(f.read())
-        f.close()
-
-path = 'corpus/indonesian_sent_tokenizer_corpus/tempo/txt'
-for foldername in os.listdir(path):
-    new_path = path + '/' + foldername
-    for filename in os.listdir(new_path):
-        f=open(new_path + '/' + filename, "r")
-        if f.mode == 'r':
-            train_text = train_text + ' ' + preproccess_text(f.read())
-        f.close()
-
-path = 'corpus/indonesian_sent_tokenizer_corpus/tempo/txt2'
-for foldername in os.listdir(path):
-    new_path = path + '/' + foldername
-    for filename in os.listdir(new_path):
-        f=open(new_path + '/' + filename, "r")
-        if f.mode == 'r':
-            train_text = train_text + ' ' + preproccess_text(f.read())
-        f.close()
-
-f=open("corpus/indonesian_sent_tokenizer_corpus/paragraf-promosi.txt", "r")
-if f.mode == 'r':
-    train_text = train_text + ' ' + preproccess_text(f.read())
-f.close()
-
-indonesian_sent_tokenizer = PunktSentenceTokenizer(train_text)
-
-id_token = open('../sms_classifier_pickle/indonesian_sent_tokenizer.pickle', 'wb')
-pickle.dump(indonesian_sent_tokenizer, id_token)
-id_token.close
-
-# Create bag-of-words
-all_words = []
-
-for message in sms_data:
-    words = word_tokenize(message)
-    for w in words:
-        all_words.append(w)
-        
-all_words = nltk.FreqDist(all_words)
-
-# Use the 1500 most common words as features
-word_features = list(all_words.keys())[:1500]
-
-fa = open('../sms_classifier_pickle/word_features.pickle', 'wb')
-pickle.dump(word_features, fa)
-fa.close
-
-# # Uncomment to load last open word features
-# word_features_f = open("word_features.pickle", "rb")
-# word_features = pickle.load(word_features_f)
-# word_features_f.close()
-
-df = pd.read_csv('corpus/sms_corpus/data.txt', engine='python', sep="<%>", header=None)
-
-classes = df[0]
-sms_data = preproccess_df(df[1])
-
-encoder = LabelEncoder()
-Y = encoder.fit_transform(classes)
-
-# Now lets do it for all the messages
-messages = list(zip(sms_data, Y))
-
-# define a seed for reproducibility
-seed = 1
-np.random.seed = seed
-np.random.shuffle(messages)
-
-# call find_features function for each SMS message
-featuresets = [(find_features(text), label) for (text, label) in messages]
-
-
-# we can split the featuresets into training and testing datasets using sklearn
-from sklearn import model_selection
-
-# split the data into training and testing datasets
-training = featuresets
+# Open word features
+word_features_f = open("sms_classifier_pickle/word_features.pickle", "rb")
+word_features = pickle.load(word_features_f)
+word_features_f.close()
 
 # Define models to train
-names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier",
-         "Naive Bayes", "SVM Linear"]
+# names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier", "Naive Bayes", "SVM Linear"]
+names = ["Logistic Regression", "Naive Bayes", "SVM Linear"]
+ratios = ['2.7;1.6;1','1;1;1','2;1;1','1;2;1','1;1;2']
 
-classifiers = [
-    KNeighborsClassifier(),
-    DecisionTreeClassifier(),
-    RandomForestClassifier(),
-    LogisticRegression(),
-    SGDClassifier(max_iter = 100),
-    MultinomialNB(),
-    SVC(kernel = 'linear')
-]
+for ratio in ratios:
+    print("Running models with a ("+ ratio + ") ratio")
+    print("")
 
-models = zip(names, classifiers)
+    normal_msg = 0
+    promo_msg = 0
+    spam_msg = 0
 
-normal_msg = 0
-promo_msg = 0
-spam_msg = 0
+    for name in names:
+        classifier_s = open("sms_classifier_pickle/ratio(" + ratio + ')/' + name + ' Classifier.pickle', "rb")
+        sms_classifier = pickle.load(classifier_s)
+        classifier_s.close()
+        
+        df = pd.read_csv('training_script/corpus/sms_corpus/test_data_1;1;1.txt', engine='python', sep="<%>", header=None)
+        classes = df[0]
+        sms_data = preproccess_df(df[1])
+        
+        encoder = LabelEncoder()
+        labels_test = encoder.fit_transform(classes)
 
-for name, model in models:
-    nltk_model = SklearnClassifier(model)
-    classifier = nltk_model.train(training)
-    f = open('../sms_classifier_pickle/' + name + ' Classifier.pickle', 'wb')
-    pickle.dump(classifier, f)
-    f.close
-    result = classifier.classify(find_features(preproccess_text('hey mau minta tolong dong bantuin')))
-    if result == 0:
-        normal_msg = normal_msg + 1
-    elif result == 1:
-        promo_msg = promo_msg + 1
-    elif result == 2:
-        spam_msg = spam_msg + 1
-    
-if normal_msg >= promo_msg and normal_msg >= spam_msg:
-    best_result = "normal message"
-    confidence = normal_msg / (normal_msg + promo_msg + spam_msg)
-elif promo_msg >= normal_msg and promo_msg >= spam_msg:
-    best_result = "promotion message"
-    confidence = promo_msg / (normal_msg + promo_msg + spam_msg)
-elif spam_msg >= normal_msg and spam_msg >= promo_msg:
-    best_result = "spam message"
-    confidence = spam_msg / (normal_msg + promo_msg + spam_msg)
+        test_results = []
+        for x in sms_data:
+            result = sms_classifier.classify(find_features(preproccess_text(x)))
+            test_results.append(result)
 
-print("Algorithm Confidence = {}".format(confidence*100))
-print("Model thinks this is a {}".format(best_result))
+        test_string = find_features(preproccess_text('mama minta pulsa dong butuh nih aku lagi di kantor polisi'))
+        result = sms_classifier.classify(test_string)
+
+        from sklearn.metrics import accuracy_score
+        accuracy = accuracy_score(test_results, labels_test)
+        
+        if result == 0:
+            normal_msg = normal_msg + 1
+            result = "normal message"
+        elif result == 1:
+            promo_msg = promo_msg + 1
+            result = "promotion message"
+        elif result == 2:
+            spam_msg = spam_msg + 1
+            result = "spam message"
+
+        print(name + " Classifier Accuracy for Ratio({}) = {}".format(ratio, accuracy*100))
+        print(name + " Model thinks this is a {}".format(result))
+        print("")
+        
+    if normal_msg >= promo_msg and normal_msg >= spam_msg:
+        best_result = "normal message"
+        confidence = normal_msg / (normal_msg + promo_msg + spam_msg)
+    elif promo_msg >= normal_msg and promo_msg >= spam_msg:
+        best_result = "promotion message"
+        confidence = promo_msg / (normal_msg + promo_msg + spam_msg)
+    elif spam_msg >= normal_msg and spam_msg >= promo_msg:
+        best_result = "spam message"
+        confidence = spam_msg / (normal_msg + promo_msg + spam_msg)
+
+    print("Overall Algorithm Confidence for Ratio({}) = {}".format(ratio, confidence*100))
+    print("Overall results is a {}".format(best_result))
+    print("")
+    print("---------------------------")
+    print("")

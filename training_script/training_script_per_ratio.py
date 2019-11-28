@@ -197,73 +197,74 @@ def find_features(message):
 
     return features
 
-# Train the sentence tokenizer
-f=open("corpus/indonesian_sent_tokenizer_corpus/indonesian-promotion-text.txt", "r")
-if f.mode == 'r':
-    train_text = preproccess_text(f.read())
-f.close()
+# # Train the sentence tokenizer
+# f=open("corpus/indonesian_sent_tokenizer_corpus/indonesian-promotion-text.txt", "r")
+# if f.mode == 'r':
+#     train_text = preproccess_text(f.read())
+# f.close()
 
-path = 'corpus/indonesian_sent_tokenizer_corpus/kompas/txt'
-for foldername in os.listdir(path):
-    new_path = path + '/' + foldername
-    for filename in os.listdir(new_path):
-        f=open(new_path + '/' + filename, "r")
-        if f.mode == 'r':
-            train_text = train_text + ' ' + preproccess_text(f.read())
-        f.close()
+# path = 'corpus/indonesian_sent_tokenizer_corpus/kompas/txt'
+# for foldername in os.listdir(path):
+#     new_path = path + '/' + foldername
+#     for filename in os.listdir(new_path):
+#         f=open(new_path + '/' + filename, "r")
+#         if f.mode == 'r':
+#             train_text = train_text + ' ' + preproccess_text(f.read())
+#         f.close()
 
-path = 'corpus/indonesian_sent_tokenizer_corpus/tempo/txt'
-for foldername in os.listdir(path):
-    new_path = path + '/' + foldername
-    for filename in os.listdir(new_path):
-        f=open(new_path + '/' + filename, "r")
-        if f.mode == 'r':
-            train_text = train_text + ' ' + preproccess_text(f.read())
-        f.close()
+# path = 'corpus/indonesian_sent_tokenizer_corpus/tempo/txt'
+# for foldername in os.listdir(path):
+#     new_path = path + '/' + foldername
+#     for filename in os.listdir(new_path):
+#         f=open(new_path + '/' + filename, "r")
+#         if f.mode == 'r':
+#             train_text = train_text + ' ' + preproccess_text(f.read())
+#         f.close()
 
-path = 'corpus/indonesian_sent_tokenizer_corpus/tempo/txt2'
-for foldername in os.listdir(path):
-    new_path = path + '/' + foldername
-    for filename in os.listdir(new_path):
-        f=open(new_path + '/' + filename, "r")
-        if f.mode == 'r':
-            train_text = train_text + ' ' + preproccess_text(f.read())
-        f.close()
+# path = 'corpus/indonesian_sent_tokenizer_corpus/tempo/txt2'
+# for foldername in os.listdir(path):
+#     new_path = path + '/' + foldername
+#     for filename in os.listdir(new_path):
+#         f=open(new_path + '/' + filename, "r")
+#         if f.mode == 'r':
+#             train_text = train_text + ' ' + preproccess_text(f.read())
+#         f.close()
 
-f=open("corpus/indonesian_sent_tokenizer_corpus/paragraf-promosi.txt", "r")
-if f.mode == 'r':
-    train_text = train_text + ' ' + preproccess_text(f.read())
-f.close()
+# f=open("corpus/indonesian_sent_tokenizer_corpus/paragraf-promosi.txt", "r")
+# if f.mode == 'r':
+#     train_text = train_text + ' ' + preproccess_text(f.read())
+# f.close()
 
-indonesian_sent_tokenizer = PunktSentenceTokenizer(train_text)
+# indonesian_sent_tokenizer = PunktSentenceTokenizer(train_text)
 
-id_token = open('../sms_classifier_pickle/indonesian_sent_tokenizer.pickle', 'wb')
-pickle.dump(indonesian_sent_tokenizer, id_token)
-id_token.close
+# id_token = open('../sms_classifier_pickle/indonesian_sent_tokenizer.pickle', 'wb')
+# pickle.dump(indonesian_sent_tokenizer, id_token)
+# id_token.close
 
-# Create bag-of-words
-all_words = []
+# # Create bag-of-words
+# all_words = []
 
-for message in sms_data:
-    words = word_tokenize(message)
-    for w in words:
-        all_words.append(w)
+# for message in sms_data:
+#     words = word_tokenize(message)
+#     for w in words:
+#         all_words.append(w)
         
-all_words = nltk.FreqDist(all_words)
+# all_words = nltk.FreqDist(all_words)
 
-# Use the 1500 most common words as features
-word_features = list(all_words.keys())[:1500]
+# # Use the 1500 most common words as features
+# word_features = list(all_words.keys())[:1500]
 
-fa = open('../sms_classifier_pickle/word_features.pickle', 'wb')
-pickle.dump(word_features, fa)
-fa.close
+# fa = open('../sms_classifier_pickle/word_features.pickle', 'wb')
+# pickle.dump(word_features, fa)
+# fa.close
 
-# # Uncomment to load last open word features
-# word_features_f = open("word_features.pickle", "rb")
-# word_features = pickle.load(word_features_f)
-# word_features_f.close()
+# Uncomment to load last open word features
+word_features_f = open("word_features.pickle", "rb")
+word_features = pickle.load(word_features_f)
+word_features_f.close()
 
-df = pd.read_csv('corpus/sms_corpus/data.txt', engine='python', sep="<%>", header=None)
+dataset_ratio='1;1;2'
+df = pd.read_csv('corpus/sms_corpus/data_'+dataset_ratio+'.txt', engine='python', sep="<%>", header=None)
 
 classes = df[0]
 sms_data = preproccess_df(df[1])
@@ -309,10 +310,15 @@ normal_msg = 0
 promo_msg = 0
 spam_msg = 0
 
+dir_loc = '../sms_classifier_pickle/ratio('+dataset_ratio+')/'
 for name, model in models:
     nltk_model = SklearnClassifier(model)
     classifier = nltk_model.train(training)
-    f = open('../sms_classifier_pickle/' + name + ' Classifier.pickle', 'wb')
+    try:
+        f = open(dir_loc + name + ' Classifier.pickle', 'wb')
+    except:
+        os.mkdir(dir_loc)
+        f = open(dir_loc + name + ' Classifier.pickle', 'wb')
     pickle.dump(classifier, f)
     f.close
     result = classifier.classify(find_features(preproccess_text('hey mau minta tolong dong bantuin')))
