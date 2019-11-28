@@ -197,7 +197,7 @@ def find_features(message):
 
     return features
 
-#Train the sentence tokenizer
+# Train the sentence tokenizer
 f=open("corpus/indonesian_sent_tokenizer_corpus/indonesian-promotion-text.txt", "r")
 if f.mode == 'r':
     train_text = preproccess_text(f.read())
