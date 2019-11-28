@@ -17,9 +17,10 @@ from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
 from sklearn.linear_model import LogisticRegression, SGDClassifier
 from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
 
-df = pd.read_csv('sms_classifier_corpus/data.txt', engine='python', sep="<%>", header=None)
+df = pd.read_csv('corpus/sms_corpus/data.txt', engine='python', sep="<%>", header=None)
 
-def convertAlay(text):
+# Indonesian SMS Preprocessing
+def convertTackyText(text):
     words = word_tokenize(text)
     new_string = ''
     for msg in words:
@@ -66,27 +67,27 @@ def convertAlay(text):
     return new_string
 
 def preproccess_text(text_messages):
-    # change words to lower case - Hello, HELLO, hello are all the same word
+    # change words to lower case
     processed = text_messages.lower()
 
-    # Replace email addresses with 'almtemail'
-    processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', ' almtemail ', processed)
+    # Replace email addresses with 'emailaddress'
+    processed = re.sub(r'^.+@[^\.].*\.[a-z]{2,}$', ' emailaddress ', processed)
         
-    # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'nmrtlpn'
-    processed = re.sub(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' nmrtlpn ', processed)
+    # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'phonenumber'
+    processed = re.sub(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' phonenumber ', processed)
 
-    # Replace URLs with 'almtweb'
-    processed = re.sub(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', ' almtweb ', processed)
+    # Replace URLs with 'webaddress'
+    processed = re.sub(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', ' webaddress ', processed)
     processed = processed.replace('http', '')
     processed = processed.replace('https', '')
     
-    # Replace money symbols with 'symbuang' (£ can by typed with ALT key + 156)
-    processed = re.sub(r'£|\$', 'symbuang ', processed)
-    processed = processed.replace(' rp.', ' symbuang ')
-    processed = processed.replace(' rp', ' symbuang ')
+    # Replace money symbols with 'moneysymbol' (£ can by typed with ALT key + 156)
+    processed = re.sub(r'£|\$', 'moneysymbol ', processed)
+    processed = processed.replace(' rp.', ' moneysymbol ')
+    processed = processed.replace(' rp', ' moneysymbol ')
         
-    # Replace numbers with 'noomr'
-    processed = re.sub(r'\d+(\.\d+)?', ' noomr ', processed)
+    # Replace numbers with 'number'
+    processed = re.sub(r'\d+(\.\d+)?', ' number ', processed)
 
     # Remove punctuation
     processed = re.sub(r'[.,\/#!%\^&\*;:+{}=\-_`~()?]', ' ', processed)
@@ -98,27 +99,31 @@ def preproccess_text(text_messages):
     processed = re.sub(r'^\s+|\s+?$', '', processed)
     return processed
 
-def preproccess_df(text_messages):# change words to lower case - Hello, HELLO, hello are all the same word
+def preproccess_df(text_messages):
+    # change words to lower case
     processed = text_messages.str.lower()
+    
+    # Remove tacky text
+    processed = convertTackyText(processed.str)
 
-    # Replace email addresses with 'almtemail'
-    processed = processed.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', ' almtemail ')
+    # Replace email addresses with 'emailaddress'
+    processed = processed.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', ' emailaddress ')
         
-    # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'nmrtlpn'
-    processed = processed.str.replace(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' nmrtlpn' )
+    # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'phonenumber'
+    processed = processed.str.replace(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' phonenumber' )
 
-    # Replace URLs with 'almtweb'
-    processed = processed.str.replace(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', ' almtweb ')
+    # Replace URLs with 'webaddress'
+    processed = processed.str.replace(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', ' webaddress ')
     processed = processed.str.replace('http', '')
     processed = processed.str.replace('https', '')
     
-    # Replace money symbols with 'symbuang' (£ can by typed with ALT key + 156)
-    processed = processed.str.replace(r'£|\$', ' symbuang ')
-    processed = processed.str.replace(' rp.', ' symbuang ')
-    processed = processed.str.replace(' rp', ' symbuang ')
+    # Replace money symbols with 'moneysymbol' (£ can by typed with ALT key + 156)
+    processed = processed.str.replace(r'£|\$', ' moneysymbol ')
+    processed = processed.str.replace(' rp.', ' moneysymbol ')
+    processed = processed.str.replace(' rp', ' moneysymbol ')
         
-    # Replace numbers with 'noomr'
-    processed = processed.str.replace(r'\d+(\.\d+)?', ' noomr ')
+    # Replace numbers with 'number'
+    processed = processed.str.replace(r'\d+(\.\d+)?', ' number ')
 
     # Remove punctuation
     processed = processed.str.replace(r'[.,\/#!%\^&\*;:{}=\-_`~()?]', ' ')
@@ -126,18 +131,30 @@ def preproccess_df(text_messages):# change words to lower case - Hello, HELLO, h
     # Replace whitespace between terms with a single space
     processed = processed.str.replace(r'\s+', ' ')
 
+    # Search for all non-letters and replace all non-letters with spa
+    processed = processed.str.replace("[^a-zA-Z]", " ")
+
     # Remove leading and trailing whitespace
     processed = processed.str.replace(r'^\s+|\s+?$', '')
     
     return processed
 
+# The find_features function will determine which of the 1500 word features are contained in the review
+def find_features(message):
+    words = word_tokenize(message)
+    features = {}
+    for word in word_features:
+        features[word] = (word in words)
+
+    return features
+
 #Train the sentence tokenizer
-f=open("indonesian_sent_tokenizer_corpus/indonesian-promotion-text.txt", "r")
+f=open("corpus/indonesian_sent_tokenizer_corpus/indonesian-promotion-text.txt", "r")
 if f.mode == 'r':
     train_text = preproccess_text(f.read())
 f.close()
 
-path = 'indonesian_sent_tokenizer_corpus/tempo/txt'
+path = 'corpus/indonesian_sent_tokenizer_corpus/kompas/txt'
 for foldername in os.listdir(path):
     new_path = path + '/' + foldername
     for filename in os.listdir(new_path):
@@ -146,8 +163,7 @@ for foldername in os.listdir(path):
             train_text = train_text + ' ' + preproccess_text(f.read())
         f.close()
 
-print('here')
-path = 'indonesian_sent_tokenizer_corpus/tempo/txt2'
+path = 'corpus/indonesian_sent_tokenizer_corpus/tempo/txt'
 for foldername in os.listdir(path):
     new_path = path + '/' + foldername
     for filename in os.listdir(new_path):
@@ -156,22 +172,25 @@ for foldername in os.listdir(path):
             train_text = train_text + ' ' + preproccess_text(f.read())
         f.close()
 
-f=open("indonesian_sent_tokenizer_corpus/paragraf-promosi.txt", "r")
+path = 'corpus/indonesian_sent_tokenizer_corpus/tempo/txt2'
+for foldername in os.listdir(path):
+    new_path = path + '/' + foldername
+    for filename in os.listdir(new_path):
+        f=open(new_path + '/' + filename, "r")
+        if f.mode == 'r':
+            train_text = train_text + ' ' + preproccess_text(f.read())
+        f.close()
+
+f=open("corpus/indonesian_sent_tokenizer_corpus/paragraf-promosi.txt", "r")
 if f.mode == 'r':
     train_text = train_text + ' ' + preproccess_text(f.read())
 f.close()
 
 indonesian_sent_tokenizer = PunktSentenceTokenizer(train_text)
 
-id_token = open('indonesian_sent_tokenizer.pickle', 'wb')
+id_token = open('../sms_classifier_pickle/indonesian_sent_tokenizer.pickle', 'wb')
 pickle.dump(indonesian_sent_tokenizer, id_token)
 id_token.close
-
-classes = df[0]
-sms_data = preproccess_df(df[1])
-
-encoder = LabelEncoder()
-Y = encoder.fit_transform(classes)
 
 # create bag-of-words
 all_words = []
@@ -186,18 +205,20 @@ all_words = nltk.FreqDist(all_words)
 # use the 1500 most common words as features
 word_features = list(all_words.keys())[:1500]
 
-fa = open('word_features.pickle', 'wb')
+fa = open('../sms_classifier_pickle/word_features.pickle', 'wb')
 pickle.dump(word_features, fa)
 fa.close
 
-# The find_features function will determine which of the 1500 word features are contained in the review
-def find_features(message):
-    words = word_tokenize(message)
-    features = {}
-    for word in word_features:
-        features[word] = (word in words)
+# # Uncomment to load last open word features
+# word_features_f = open("word_features.pickle", "rb")
+# word_features = pickle.load(word_features_f)
+# word_features_f.close()
 
-    return features
+classes = df[0]
+sms_data = preproccess_df(df[1])
+
+encoder = LabelEncoder()
+Y = encoder.fit_transform(classes)
 
 # Now lets do it for all the messages
 messages = list(zip(sms_data, Y))
@@ -240,10 +261,10 @@ spam_msg = 0
 for name, model in models:
     nltk_model = SklearnClassifier(model)
     classifier = nltk_model.train(training)
-    f = open(name + ' Classifier.pickle', 'wb')
+    f = open('../sms_classifier_pickle/' + name + ' Classifier.pickle', 'wb')
     pickle.dump(classifier, f)
     f.close
-    result = classifier.classify(find_features(preproccess_text('hey')))
+    result = classifier.classify(find_features(preproccess_text('hey mau minta tolong dong bantuin')))
     if result == 0:
         normal_msg = normal_msg + 1
     elif result == 1:
