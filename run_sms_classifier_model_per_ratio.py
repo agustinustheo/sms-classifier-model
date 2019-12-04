@@ -193,7 +193,7 @@ word_features_f.close()
 # Define models to train
 # names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier", "Naive Bayes", "SVM Linear"]
 names = ["Logistic Regression", "Naive Bayes", "SVM Linear"]
-ratios = ['2.7;1.6;1','1;1;1','2;1;1','1;2;1','1;1;2']
+ratios = ['5.5;3.3;1','1;1;1','2;1;1','1;2;1','1;1;2']
 
 for ratio in ratios:
     print("Running models with a ("+ ratio + ") ratio")
@@ -220,7 +220,7 @@ for ratio in ratios:
             result = sms_classifier.classify(find_features(preproccess_text(x)))
             test_results.append(result)
 
-        test_string = find_features(preproccess_text('mama minta pulsa dong butuh nih aku lagi di kantor polisi'))
+        test_string = find_features(preproccess_text('Seminar Spektakuler Develop Bisnis StarUp TourTravel Dgn Web Auto 14OKT18 13:00 HARRIS HOTEL TEBET Segera daftar seat terbatas Daftar: nama/NoHp WA 08112012929'))
         result = sms_classifier.classify(test_string)
 
         from sklearn.metrics import accuracy_score

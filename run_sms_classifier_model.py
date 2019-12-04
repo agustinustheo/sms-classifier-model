@@ -191,15 +191,15 @@ word_features = pickle.load(word_features_f)
 word_features_f.close()
 
 # Define models to train
-names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier",
-         "Naive Bayes", "SVM Linear"]
+# names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier", "Naive Bayes", "SVM Linear"]
+names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier", "Naive Bayes", "SVM Linear"]
 
 normal_msg = 0
 promo_msg = 0
 spam_msg = 0
 
 for name in names:
-    classifier_s = open("sms_classifier_pickle/" + name + ' Classifier.pickle', "rb")
+    classifier_s = open("sms_classifier_pickle/ratio(5.5;3.3;1)/" + name + ' Classifier.pickle', "rb")
     sms_classifier = pickle.load(classifier_s)
     classifier_s.close()
     
@@ -215,7 +215,7 @@ for name in names:
         result = sms_classifier.classify(find_features(preproccess_text(x)))
         test_results.append(result)
 
-    test_string = find_features(preproccess_text('mama minta pulsa dong butuh nih aku lagi di kantor polisi'))
+    test_string = find_features(preproccess_text('Seminar Spektakuler Develop Bisnis StarUp TourTravel Dgn Web Auto 14OKT18 13:00 HARRIS HOTEL TEBET Segera daftar seat terbatas Daftar: nama/NoHp WA 08112012929'))
     result = sms_classifier.classify(test_string)
 
     from sklearn.metrics import accuracy_score
