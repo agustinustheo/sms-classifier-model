@@ -7,6 +7,7 @@ import pickle
 import numpy as np
 import pandas as pd
 from sklearn.svm import SVC
+from xgboost import XGBoostClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeClassifier
