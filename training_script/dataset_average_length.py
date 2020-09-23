@@ -6,17 +6,7 @@ import random
 import pickle
 import numpy as np
 import pandas as pd
-from sklearn.svm import SVC
-from xgboost import XGBoostClassifier
-from sklearn.naive_bayes import MultinomialNB
-from sklearn.preprocessing import LabelEncoder
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from nltk.classify.scikitlearn import SklearnClassifier
-from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
-from sklearn.linear_model import LogisticRegression, SGDClassifier
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
+from nltk.tokenize import Pword_tokenize
 
 # Indonesian SMS Preprocessing
 def convert_tacky_text_df(df):
