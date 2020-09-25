@@ -191,8 +191,7 @@ word_features = pickle.load(word_features_f)
 word_features_f.close()
 
 # Define models to train
-# names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier", "Naive Bayes", "SVM Linear"]
-names = ["Logistic Regression", "Naive Bayes", "SVM Linear"]
+names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "XGBoost", "Logistic Regression", "SGD Classifier", "Naive Bayes", "SVM Linear"]
 ratios = ['5.5;3.3;1','1;1;1','2;1;1','1;2;1','1;1;2']
 
 for ratio in ratios:
