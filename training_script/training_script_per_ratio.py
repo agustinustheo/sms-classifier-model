@@ -7,6 +7,7 @@ import pickle
 import numpy as np
 import pandas as pd
 from sklearn.svm import SVC
+from xgboost import XGBClassifier
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.preprocessing import LabelEncoder
 from sklearn.tree import DecisionTreeClassifier
@@ -263,81 +264,83 @@ word_features_f = open("word_features.pickle", "rb")
 word_features = pickle.load(word_features_f)
 word_features_f.close()
 
-dataset_ratio='1;1;2'
-df = pd.read_csv('corpus/sms_corpus/data_'+dataset_ratio+'.txt', engine='python', sep="<%>", header=None)
+dataset_ratios = ['1;1;1', '1;1;2', '1;2;1', '2;1;1']
+for dataset_ratio in dataset_ratios:
+    df = pd.read_csv('corpus/sms_corpus/data_'+dataset_ratio+'.txt', engine='python', sep="<%>", header=None)
 
-classes = df[0]
-sms_data = preproccess_df(df[1])
+    classes = df[0]
+    sms_data = preproccess_df(df[1])
 
-encoder = LabelEncoder()
-Y = encoder.fit_transform(classes)
+    encoder = LabelEncoder()
+    Y = encoder.fit_transform(classes)
 
-# Now lets do it for all the messages
-messages = list(zip(sms_data, Y))
+    # Now lets do it for all the messages
+    messages = list(zip(sms_data, Y))
 
-# define a seed for reproducibility
-seed = 1
-np.random.seed = seed
-np.random.shuffle(messages)
+    # define a seed for reproducibility
+    seed = 1
+    np.random.seed = seed
+    np.random.shuffle(messages)
 
-# call find_features function for each SMS message
-featuresets = [(find_features(text), label) for (text, label) in messages]
+    # call find_features function for each SMS message
+    featuresets = [(find_features(text), label) for (text, label) in messages]
 
 
-# we can split the featuresets into training and testing datasets using sklearn
-from sklearn import model_selection
+    # we can split the featuresets into training and testing datasets using sklearn
+    from sklearn import model_selection
 
-# split the data into training and testing datasets
-training = featuresets
+    # split the data into training and testing datasets
+    training = featuresets
 
-# Define models to train
-names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "SGD Classifier",
-         "Naive Bayes", "SVM Linear"]
+    # Define models to train
+    names = ["K Nearest Neighbors", "Decision Tree", "Random Forest", "Logistic Regression", "XGBoost", "SGD Classifier",
+            "Naive Bayes", "SVM Linear"]
 
-classifiers = [
-    KNeighborsClassifier(),
-    DecisionTreeClassifier(),
-    RandomForestClassifier(),
-    LogisticRegression(),
-    SGDClassifier(max_iter = 100),
-    MultinomialNB(),
-    SVC(kernel = 'linear')
-]
+    classifiers = [
+        KNeighborsClassifier(),
+        DecisionTreeClassifier(),
+        RandomForestClassifier(),
+        LogisticRegression(),
+        XGBClassifier(),
+        SGDClassifier(max_iter = 100),
+        MultinomialNB(),
+        SVC(kernel = 'linear')
+    ]
 
-models = zip(names, classifiers)
+    models = zip(names, classifiers)
 
-normal_msg = 0
-promo_msg = 0
-spam_msg = 0
+    normal_msg = 0
+    promo_msg = 0
+    spam_msg = 0
 
-dir_loc = '../sms_classifier_pickle/ratio('+dataset_ratio+')/'
-for name, model in models:
-    nltk_model = SklearnClassifier(model)
-    classifier = nltk_model.train(training)
-    try:
-        f = open(dir_loc + name + ' Classifier.pickle', 'wb')
-    except:
-        os.mkdir(dir_loc)
-        f = open(dir_loc + name + ' Classifier.pickle', 'wb')
-    pickle.dump(classifier, f)
-    f.close
-    result = classifier.classify(find_features(preproccess_text('hey mau minta tolong dong bantuin')))
-    if result == 0:
-        normal_msg = normal_msg + 1
-    elif result == 1:
-        promo_msg = promo_msg + 1
-    elif result == 2:
-        spam_msg = spam_msg + 1
-    
-if normal_msg >= promo_msg and normal_msg >= spam_msg:
-    best_result = "normal message"
-    confidence = normal_msg / (normal_msg + promo_msg + spam_msg)
-elif promo_msg >= normal_msg and promo_msg >= spam_msg:
-    best_result = "promotion message"
-    confidence = promo_msg / (normal_msg + promo_msg + spam_msg)
-elif spam_msg >= normal_msg and spam_msg >= promo_msg:
-    best_result = "spam message"
-    confidence = spam_msg / (normal_msg + promo_msg + spam_msg)
+    dir_loc = '../sms_classifier_pickle/ratio('+dataset_ratio+')/'
+    for name, model in models:
+        nltk_model = SklearnClassifier(model)
+        classifier = nltk_model.train(training)
+        try:
+            f = open(dir_loc + name + ' Classifier.pickle', 'wb')
+        except:
+            os.mkdir(dir_loc)
+            f = open(dir_loc + name + ' Classifier.pickle', 'wb')
+        pickle.dump(classifier, f)
+        f.close
+        result = classifier.classify(find_features(preproccess_text('hey mau minta tolong dong bantuin')))
+        if result == 0:
+            normal_msg = normal_msg + 1
+        elif result == 1:
+            promo_msg = promo_msg + 1
+        elif result == 2:
+            spam_msg = spam_msg + 1
+        
+    if normal_msg >= promo_msg and normal_msg >= spam_msg:
+        best_result = "normal message"
+        confidence = normal_msg / (normal_msg + promo_msg + spam_msg)
+    elif promo_msg >= normal_msg and promo_msg >= spam_msg:
+        best_result = "promotion message"
+        confidence = promo_msg / (normal_msg + promo_msg + spam_msg)
+    elif spam_msg >= normal_msg and spam_msg >= promo_msg:
+        best_result = "spam message"
+        confidence = spam_msg / (normal_msg + promo_msg + spam_msg)
 
-print("Algorithm Confidence = {}".format(confidence*100))
-print("Model thinks this is a {}".format(best_result))
+    print("Algorithm Confidence = {}".format(confidence*100))
+    print("Model thinks this is a {}".format(best_result))
