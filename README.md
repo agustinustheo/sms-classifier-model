@@ -13,7 +13,7 @@ This is the code behind:
 ## Branches
 
 - **`master`**: modernised for current Python (3.11+) and libraries, managed with [uv](https://docs.astral.sh/uv/).
-- **[`original`](../../tree/original)**: the code exactly as it was for the paper (commit `dda2997`, September 2020),
+- **[`original`](../../tree/original)**: the code exactly as it was for the paper (commit `40eb95d`, September 2020),
   including the trained models from that time.
 
 ## Quick start
@@ -39,6 +39,24 @@ Other scripts (run them from `training_script/`):
 
 `run_sms_classifier_model_per_ratio.py` (repo root) needs the per-ratio models trained first.
 
+## Reproducing Table I
+
+```bash
+cd training_script && uv run reproduce_table1.py      # ~10 min on a modern laptop
+```
+
+This rebuilds all of Table I: 10-fold CV on both training batches, plus the external test on Rahmi & Wibisono's dataset.
+It writes `results/table1_reproduced.md` with the paper's numbers alongside. It re-implements the 2020 pipeline,
+including its quirks, but seeds every model, so runs are deterministic.
+
+Latest run (anonymised corpus, full details in [`training_script/results/table1_reproduced.md`](training_script/results/table1_reproduced.md)):
+
+- 24 of the 32 cells are within 2 points of the paper and 30 within 3, and the conclusions hold. RF and the linear models lead
+  (93.5–94.8% CV), KNN is worst and drops sharply on the balanced batch, and MNB scores ~58% on the external set.
+- Most deviations are in the high-variance tree model. The largest is DT tested externally after training on batch 2:
+  75.0% vs the paper's 65.8%. The 2020 runs weren't seeded, so single runs of DT/KNN vary.
+- Duplicate-aware CV is 1.5–6 points lower than the paper-style CV (e.g. RF 94.2 → 91.9 on batch 1).
+
 ## Data
 
 `training_script/corpus/sms_corpus/`, in `label<%>text` format (`0` ham, `1` promo, `2` spam):
@@ -53,9 +71,18 @@ contacts and digit runs of 7 or more were replaced with `phonenumber`, `emailadd
 Masking barely changes the results: balanced-batch 10-fold CV gives SVM 93.6%, SGD 93.7% and MNB 92.1%,
 against 93.89%, 93.49% and 92.46% in the paper.
 
-The paper's external test set is Rahmi & Wibisono (2016), 1,143 SMS, CC BY-SA 4.0. It's available from
-[Yudi Wibisono's blog](https://yudiwbs.wordpress.com/2018/08/05/dataset-klasifikasi-bahasa-indonesia-sms-spam-klasifikasi-teks-dengan-scikit-learn/).
-Note that its labels are `0` normal, `1` fraud, `2` promo.
+The paper's external test set is in `training_script/corpus/external/rahmi2016/`: Rahmi & Wibisono (2016), 1,143 SMS
+(569 normal, 335 fraud, 239 promo), unmodified from
+[Yudi Wibisono's release](https://yudiwbs.wordpress.com/2018/08/05/dataset-klasifikasi-bahasa-indonesia-sms-spam-klasifikasi-teks-dengan-scikit-learn/)
+under CC BY-SA 4.0. Its labels are `0` normal, `1` fraud, `2` promo, so `reproduce_table1.py` maps them to this dataset's scheme.
+Cite it as: Rahmi, F. and Wibisono, Y. (2016). *Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes*. Unpublished manuscript.
+
+Known issues with the data, worth knowing before comparing models:
+
+- **Duplicates.** `data.txt` has 4,125 rows but only about 1,900 distinct messages (operator messages repeat up to 42 times),
+  and 86 texts carry conflicting labels. Ordinary k-fold therefore tests on copies of training messages, which inflates
+  accuracy by 2 to 6 points (see the duplicate-aware CV above).
+- `test_data.txt` (201 rows) is not the external test set, and 197 of its rows also appear in `data.txt`.
 
 ## What changed from `original`
 
@@ -89,3 +116,19 @@ Harrison Kinsley a.k.a. sentdex, Laurence Moroney and Eduonix.
 - Sentdex, [NLTK with Python 3 for Natural Language Processing](https://www.youtube.com/watch?v=FLZvOKSCkxY&list=PLQVvvaa0QuDf2JswnfiGkliBInZnIC4HL)
 - Eduonix, [NLP for Text Classification with NLTK & Scikit-learn](https://www.youtube.com/watch?v=G4UVJoGFAv0)
 - Laurence Moroney, [Text Classification Tutorial (Coding TensorFlow)](https://www.youtube.com/watch?v=BO4g2DRvL6U)
+
+
+## License
+
+This repository is licensed under [CC BY-SA 4.0](LICENSE). If you use the code, data or results, please cite the paper above.
+The external dataset in `training_script/corpus/external/rahmi2016/` is © Rahmi & Wibisono, also CC BY-SA 4.0.
+
+## Repository history
+
+The whole history (including `original`) was rewritten in November 2026:
+
+- the SMS data is anonymised in every commit (see `anonymise_corpus.py`);
+- a third-party Indonesian news corpus (Kompas/Tempo articles), once used to train a sentence tokenizer, was removed;
+- the licence was added from the first commit on.
+
+Commit hashes from before November 2026 no longer exist.

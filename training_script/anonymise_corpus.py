@@ -2,7 +2,7 @@
 
     uv run --with openpyxl anonymise_corpus.py
 
-Replaces, in every corpus file (.txt, .csv, .xlsx):
+Replaces, in every corpus file (.txt, .csv, .xlsx; external datasets are left as published):
   - phone numbers             -> "phonenumber"
   - e-mail addresses          -> "emailaddress"
   - names in shared contacts  -> "[Name]nama"
@@ -11,7 +11,7 @@ Replaces, in every corpus file (.txt, .csv, .xlsx):
 The replacement words are the ones the preprocessing already produces, so the
 models see the same kind of tokens. URLs are kept (they're mostly company links
 and useful for spam detection). Names written inside ordinary messages are not
-detected automatically. The unmasked data is on the `original` branch.
+detected automatically. This masking was also applied to every past commit, including the `original` branch.
 """
 
 import re
@@ -39,6 +39,8 @@ def mask(text: str) -> str:
 def main():
     total = 0
     for path in sorted(CORPUS.rglob("*")):
+        if "external" in path.parts:
+            continue
         if path.suffix in (".txt", ".csv"):
             old = path.read_text(encoding="utf-8")
             new = mask(old)
@@ -58,6 +60,10 @@ def main():
                             if new != cell.value:
                                 cell.value = new
                                 n += 1
+                        elif isinstance(cell.value, (int, float)) and not isinstance(cell.value, bool) \
+                                and abs(cell.value) >= 1_000_000:  # a message that is just a 7+ digit number
+                            cell.value = "number"
+                            n += 1
             if n:
                 wb.save(path)
         else:
