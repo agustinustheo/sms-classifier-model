@@ -47,6 +47,12 @@ Other scripts (run them from `training_script/`):
 - `data_1;1;1.txt`: balanced 420/420/420 sample. Used as batch 2.
 - `data_1;1;2.txt`, `data_1;2;1.txt`, `data_2;1;1.txt`: other ratios.
 
+The messages come from the authors' own phones and are **anonymised**. Phone numbers, e-mail addresses, names in shared
+contacts and digit runs of 7 or more were replaced with `phonenumber`, `emailaddress`, `[Name]nama` and `number`
+(`training_script/anonymise_corpus.py`). Names inside ordinary messages were not masked.
+Masking barely changes the results: balanced-batch 10-fold CV gives SVM 93.6%, SGD 93.7% and MNB 92.1%,
+against 93.89%, 93.49% and 92.46% in the paper.
+
 The paper's external test set is Rahmi & Wibisono (2016), 1,143 SMS, CC BY-SA 4.0. It's available from
 [Yudi Wibisono's blog](https://yudiwbs.wordpress.com/2018/08/05/dataset-klasifikasi-bahasa-indonesia-sms-spam-klasifikasi-teks-dengan-scikit-learn/).
 Note that its labels are `0` normal, `1` fraud, `2` promo.
