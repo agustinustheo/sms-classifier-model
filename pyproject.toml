@@ -1,0 +1,16 @@
+[project]
+name = "sms-classifier-model"
+version = "2.0.0"
+description = "Indonesian SMS classifier (ham / promo / spam), code for 'SMS Spam Filtering using Machine Learning in Bahasa Indonesia' (EIConCIT 2021)"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "nltk>=3.9",
+    "numpy>=1.26",
+    "pandas>=2.2",
+    "scikit-learn>=1.5",
+    "xgboost>=2.1",
+]
+
+[tool.uv]
+package = false

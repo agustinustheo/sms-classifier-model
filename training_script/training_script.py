@@ -2,6 +2,7 @@ import os
 import re
 import sys
 import nltk
+nltk.download('punkt_tab', quiet=True)  # tokenizer data for word_tokenize (NLTK >= 3.9)
 import random
 import pickle
 import numpy as np
@@ -157,35 +158,35 @@ def preproccess_df(text_messages):
     processed = convert_tacky_text_df(processed)
 
     # Replace email addresses with 'emailaddress'
-    processed = processed.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', ' emailaddress ')
+    processed = processed.str.replace(r'^.+@[^\.].*\.[a-z]{2,}$', ' emailaddress ', regex=True)
         
     # Replace phone numbers (formats include paranthesis, spaces, no spaces, dashes) with 'phonenumber'
-    processed = processed.str.replace(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' phonenumber' )
+    processed = processed.str.replace(r'(\()?(\+62|62|0)(\d{2,3})?\)?[ .-]?\d{2,4}[ .-]?\d{2,4}[ .-]?\d{2,4}', ' phonenumber', regex=True)
 
     # Replace URLs with 'webaddress'
-    processed = processed.str.replace(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', ' webaddress ')
-    processed = processed.str.replace('http', '')
-    processed = processed.str.replace('https', '')
+    processed = processed.str.replace(r'[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', ' webaddress ', regex=True)
+    processed = processed.str.replace('http', '', regex=True)
+    processed = processed.str.replace('https', '', regex=True)
     
     # Replace money symbols with 'moneysymbol' (£ can by typed with ALT key + 156)
-    processed = processed.str.replace(r'£|\$', ' moneysymbol ')
-    processed = processed.str.replace(' rp.', ' moneysymbol ')
-    processed = processed.str.replace(' rp', ' moneysymbol ')
+    processed = processed.str.replace(r'£|\$', ' moneysymbol ', regex=True)
+    processed = processed.str.replace(' rp.', ' moneysymbol ', regex=True)
+    processed = processed.str.replace(' rp', ' moneysymbol ', regex=True)
         
     # Replace numbers with 'number'
-    processed = processed.str.replace(r'\d+(\.\d+)?', ' number ')
+    processed = processed.str.replace(r'\d+(\.\d+)?', ' number ', regex=True)
 
     # Remove punctuation
-    processed = processed.str.replace(r'[.,\/#!%\^&\*;:{}=\-_`~()?]', ' ')
+    processed = processed.str.replace(r'[.,\/#!%\^&\*;:{}=\-_`~()?]', ' ', regex=True)
 
     # Replace whitespace between terms with a single space
-    processed = processed.str.replace(r'\s+', ' ')
+    processed = processed.str.replace(r'\s+', ' ', regex=True)
 
     # Search for all non-letters and replace all non-letters with spa
-    processed = processed.str.replace("[^a-zA-Z]", " ")
+    processed = processed.str.replace("[^a-zA-Z]", " ", regex=True)
 
     # Remove leading and trailing whitespace
-    processed = processed.str.replace(r'^\s+|\s+?$', '')
+    processed = processed.str.replace(r'^\s+|\s+?$', '', regex=True)
     
     return processed
 
@@ -277,7 +278,7 @@ messages = list(zip(sms_data, Y))
 
 # define a seed for reproducibility
 seed = 1
-np.random.seed = seed
+np.random.seed(seed)
 np.random.shuffle(messages)
 
 # call find_features function for each SMS message
@@ -311,8 +312,9 @@ normal_msg = 0
 promo_msg = 0
 spam_msg = 0
 
+os.makedirs('../sms_classifier_pickle/ratio(5.5;3.3;1)', exist_ok=True)
 for name, model in models:
-    nltk_model = SklearnClassifier(model)
+    nltk_model = SklearnClassifier(model, sparse=False)  # dense: current sklearn rejects int64-indexed sparse input for SGD/SVM
     classifier = nltk_model.train(training)
     f = open('../sms_classifier_pickle/ratio(5.5;3.3;1)/' + name + ' Classifier.pickle', 'wb')
     pickle.dump(classifier, f)
