@@ -1,7 +1,5 @@
 # Indonesian SMS Classifier
 
-## Introduction
-
 This repository contains code for *Short Message Service (SMS) Spam Filtering using Machine Learning in Bahasa Indonesia*
 ([EIConCIT 2021](https://doi.org/10.1109/EIConCIT50028.2021.9431859)).
 
@@ -62,9 +60,7 @@ The external test set in `training_script/corpus/external/rahmi2016/` is the Ind
 Ferdila Rahmi and Yudi Wibisono: 1,143 messages (569 normal, 335 fraud, 239 promo) from Rahmi's research at
 Universitas Pendidikan Indonesia ([thesis](https://repository.upi.edu/26936/)), published by Yudi Wibisono
 ([source](https://yudiwbs.wordpress.com/2018/08/05/dataset-klasifikasi-bahasa-indonesia-sms-spam-klasifikasi-teks-dengan-scikit-learn/))
-under CC BY-SA 4.0. Thank you to both for sharing it. If you use it, please cite it as they ask:
-
-> Rahmi, F. and Wibisono, Y. (2016). Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes, Unpublished manuscript.
+under CC BY-SA 4.0. Thank you to both for sharing it. If you use it, please cite it too (see [Citing](#citing)).
 
 ## Highlevel overview of source files
 
@@ -101,4 +97,15 @@ If you find this repository useful in your research, we'd really appreciate it i
       doi={10.1109/EIConCIT50028.2021.9431859}
     }
 
-GitHub's "Cite this repository" button gives the same in other formats.
+If you use the external test set, please also cite Rahmi and Wibisono's work, as they ask:
+
+> Rahmi, F. and Wibisono, Y. (2016). Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes, Unpublished manuscript.
+
+    @unpublished{rahmi2016sms,
+      title={Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes},
+      author={Rahmi, Ferdila and Wibisono, Yudi},
+      year={2016},
+      note={Unpublished manuscript}
+    }
+
+GitHub's "Cite this repository" button gives our paper in other formats.
