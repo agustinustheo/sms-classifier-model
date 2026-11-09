@@ -97,9 +97,7 @@ If you find this repository useful in your research, we'd really appreciate it i
       doi={10.1109/EIConCIT50028.2021.9431859}
     }
 
-If you use the external test set, please also cite Rahmi and Wibisono's work, as they ask:
-
-> Rahmi, F. and Wibisono, Y. (2016). Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes, Unpublished manuscript.
+If you use the external test set, please also cite Rahmi and Wibisono's work:
 
     @unpublished{rahmi2016sms,
       title={Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes},
