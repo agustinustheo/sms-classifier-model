@@ -75,7 +75,7 @@ The paper's external test set is in `training_script/corpus/external/rahmi2016/`
 (569 normal, 335 fraud, 239 promo), unmodified from
 [Yudi Wibisono's release](https://yudiwbs.wordpress.com/2018/08/05/dataset-klasifikasi-bahasa-indonesia-sms-spam-klasifikasi-teks-dengan-scikit-learn/)
 under CC BY-SA 4.0. Its labels are `0` normal, `1` fraud, `2` promo, so `reproduce_table1.py` maps them to this dataset's scheme.
-Cite it as: Rahmi, F. and Wibisono, Y. (2016). *Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes*. Unpublished manuscript.
+If you use it, please cite it as its authors ask (see [Credits](#credits)).
 
 Known issues with the data, worth knowing before comparing models:
 
@@ -108,7 +108,40 @@ Not modernised: `training_script/tensorflow_script/` (an exploratory Keras noteb
 NLTK ≥ 3.9.3 refuses data directories that other users can write to. If `word_tokenize` reports that
 `~/nltk_data` is "writable by other accounts", run `chmod -R go-w ~/nltk_data`.
 
+## Citing
+
+If you use this code, data or results, please cite the paper. GitHub's **"Cite this repository"** button (from
+[`CITATION.cff`](CITATION.cff)) gives this in APA and BibTeX:
+
+```bibtex
+@inproceedings{theodorus2021sms,
+  author    = {Theodorus, Agustinus and Prasetyo, Tio Kristian and Hartono, Reynaldi and Suhartono, Derwin},
+  title     = {Short Message Service ({SMS}) Spam Filtering using Machine Learning in Bahasa Indonesia},
+  booktitle = {2021 3rd East Indonesia Conference on Computer and Information Technology (EIConCIT)},
+  pages     = {199--202},
+  year      = {2021},
+  publisher = {IEEE},
+  address   = {Surabaya, Indonesia},
+  doi       = {10.1109/EIConCIT50028.2021.9431859}
+}
+```
+
 ## Credits
+
+### External dataset: Rahmi & Wibisono (2016)
+
+The external test set comes from Ferdila Rahmi's 2016 undergraduate research at Universitas Pendidikan Indonesia
+([thesis record](https://repository.upi.edu/26936/)), supervised by Yudi Wibisono, who
+[published the dataset](https://yudiwbs.wordpress.com/2018/08/05/dataset-klasifikasi-bahasa-indonesia-sms-spam-klasifikasi-teks-dengan-scikit-learn/)
+with Rahmi's permission in August 2018 (v1.0, CC BY-SA 4.0). It is included unmodified.
+
+The dataset's notes ask that it be cited as:
+
+> Rahmi, F. and Wibisono, Y. (2016). Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes, Unpublished manuscript.
+
+The same reference is listed in [`CITATION.cff`](CITATION.cff). Thank you to both for making the data public.
+
+### Tutorials
 
 We couldn't have assembled this model without the help of some awesome creators on the internet:
 Harrison Kinsley a.k.a. sentdex, Laurence Moroney and Eduonix.
@@ -120,7 +153,7 @@ Harrison Kinsley a.k.a. sentdex, Laurence Moroney and Eduonix.
 
 ## License
 
-This repository is licensed under [CC BY-SA 4.0](LICENSE). If you use the code, data or results, please cite the paper above.
+This repository is licensed under [CC BY-SA 4.0](LICENSE). If you use the code, data or results, please cite the paper (see [Citing](#citing)).
 The external dataset in `training_script/corpus/external/rahmi2016/` is © Rahmi & Wibisono, also CC BY-SA 4.0.
 
 ## Repository history

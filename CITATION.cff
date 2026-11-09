@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this software, data or results, please cite the paper below."
+title: "Indonesian SMS Classifier (sms-classifier-model)"
+type: software
+authors:
+  - family-names: Theodorus
+    given-names: Agustinus
+license: CC-BY-SA-4.0
+repository-code: "https://github.com/agustinustheo/sms-classifier-model"
+keywords:
+  - sms spam
+  - text classification
+  - bahasa indonesia
+  - machine learning
+preferred-citation:
+  type: conference-paper
+  title: "Short Message Service (SMS) Spam Filtering using Machine Learning in Bahasa Indonesia"
+  authors:
+    - family-names: Theodorus
+      given-names: Agustinus
+      affiliation: Bina Nusantara University
+    - family-names: Prasetyo
+      given-names: Tio Kristian
+      affiliation: Bina Nusantara University
+    - family-names: Hartono
+      given-names: Reynaldi
+      affiliation: Bina Nusantara University
+    - family-names: Suhartono
+      given-names: Derwin
+      affiliation: Bina Nusantara University
+  collection-title: "2021 3rd East Indonesia Conference on Computer and Information Technology (EIConCIT)"
+  publisher:
+    name: IEEE
+  conference:
+    name: "East Indonesia Conference on Computer and Information Technology (EIConCIT)"
+    city: Surabaya
+    country: ID
+    date-start: 2021-04-09
+    date-end: 2021-04-11
+  start: 199
+  end: 202
+  year: 2021
+  doi: 10.1109/EIConCIT50028.2021.9431859
+  url: "https://doi.org/10.1109/EIConCIT50028.2021.9431859"
+references:
+  - type: unpublished
+    title: "Aplikasi SMS Spam Filtering pada Android menggunakan Naive Bayes"
+    authors:
+      - family-names: Rahmi
+        given-names: Ferdila
+      - family-names: Wibisono
+        given-names: Yudi
+    year: 2016
+    notes: "Unpublished manuscript. Source of the external test set in training_script/corpus/external/rahmi2016/ (1,143 SMS, CC BY-SA 4.0)."
+    license: CC-BY-SA-4.0
+    url: "https://yudiwbs.wordpress.com/2018/08/05/dataset-klasifikasi-bahasa-indonesia-sms-spam-klasifikasi-teks-dengan-scikit-learn/"
