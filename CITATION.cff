@@ -1,12 +1,12 @@
 cff-version: 1.2.0
 message: "If you use this software, data or results, please cite the paper below."
-title: "Indonesian SMS Classifier (sms-classifier-model)"
+title: "Indonesian SMS Spam Filtering"
 type: software
 authors:
   - family-names: Theodorus
     given-names: Agustinus
 license: CC-BY-SA-4.0
-repository-code: "https://github.com/agustinustheo/sms-classifier-model"
+repository-code: "https://github.com/agustinustheo/indonesian-sms-spam-filtering"
 keywords:
   - sms spam
   - text classification

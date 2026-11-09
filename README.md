@@ -1,4 +1,4 @@
-# Indonesian SMS Classifier
+# Indonesian SMS Spam Filtering
 
 This repository contains code for *Short Message Service (SMS) Spam Filtering using Machine Learning in Bahasa Indonesia*
 ([EIConCIT 2021](https://doi.org/10.1109/EIConCIT50028.2021.9431859)).
@@ -15,8 +15,8 @@ The code as it was for the paper is on the [`original`](../../tree/original) bra
 Clone the repository and install the dependencies with [uv](https://docs.astral.sh/uv/):
 
 ```
-git clone https://github.com/agustinustheo/sms-classifier-model.git
-cd sms-classifier-model
+git clone https://github.com/agustinustheo/indonesian-sms-spam-filtering.git
+cd indonesian-sms-spam-filtering
 uv sync
 ```
 
